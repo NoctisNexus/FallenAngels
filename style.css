@@ -56,3 +56,25 @@ body::before {
     opacity: 0.8;
     z-index: -1;
 }
+.logo {
+    margin-bottom: 30px;
+}
+
+.logo h1 {
+    font-size: 80px;
+    color: #e0e0e0;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    text-shadow:
+        0 0 10px #ffffff,
+        0 0 25px #8b0000,
+        0 0 50px #400000;
+}
+
+.subtitle {
+    font-size: 32px;
+    color: #990000;
+    letter-spacing: 5px;
+    margin-top: 20px;
+    text-shadow: 0 0 15px #660000;
+}
