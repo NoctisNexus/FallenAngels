@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -13,18 +17,22 @@ body {
 
 /* Kopfbereich */
 
-.header {
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 25px 40px;
 }
 
 
-/* kleines Logo oben links */
+/* Logo oben links */
 
-.logo-small img {
-    width: 150px;
+.logo {
+    width: 180px;
     height: auto;
 }
 
@@ -34,15 +42,16 @@ body {
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 25px;
+    margin-left: 30px;
     font-size: 18px;
+    letter-spacing: 2px;
 }
 
 
 /* Hauptbereich */
 
 .hero {
-    height: calc(100vh - 100px);
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,35 +59,32 @@ nav a {
 }
 
 
-/* Titel */
+/* Text in der Mitte */
 
-.intro h1 {
+.content h1 {
     font-size: 80px;
-    letter-spacing: 8px;
+    letter-spacing: 10px;
+    margin: 0;
     text-shadow:
-        0 0 10px #8b0000,
+        0 0 10px white,
         0 0 30px #8b0000;
 }
 
 
-/* Untertitel */
-
-.intro h2 {
+.content h2 {
+    font-size: 32px;
     color: #990000;
-    font-size: 35px;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
+    margin-top: 20px;
 }
 
 
-/* Genre */
-
-.genre {
+.content p {
     font-size: 22px;
     color: #cccccc;
+    margin-top: 40px;
 }
 
-
-/* Slogan */
 
 .slogan {
     margin-top: 30px;
