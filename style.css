@@ -10,74 +10,79 @@ body {
     min-height: 100vh;
 }
 
-.hero {
-    height: 100vh;
+
+/* Kopfbereich */
+
+.header {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+
+/* kleines Logo oben links */
+
+.logo-small img {
+    width: 150px;
+    height: auto;
+}
+
+
+/* Navigation */
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 18px;
+}
+
+
+/* Hauptbereich */
+
+.hero {
+    height: calc(100vh - 100px);
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-h1 {
-    font-size: 70px;
-    color: #ffffff;
+
+/* Titel */
+
+.intro h1 {
+    font-size: 80px;
     letter-spacing: 8px;
     text-shadow:
         0 0 10px #8b0000,
-        0 0 20px #8b0000,
-        0 0 40px #8b0000;
+        0 0 30px #8b0000;
 }
 
-h2 {
-    font-size: 35px;
+
+/* Untertitel */
+
+.intro h2 {
     color: #990000;
+    font-size: 35px;
     letter-spacing: 4px;
-    margin-top: 10px;
 }
+
+
+/* Genre */
 
 .genre {
-    font-size: 24px;
-    color: #bbbbbb;
-    margin-top: 40px;
+    font-size: 22px;
+    color: #cccccc;
 }
+
+
+/* Slogan */
 
 .slogan {
+    margin-top: 30px;
     font-size: 22px;
     font-style: italic;
-    color: #888888;
-    margin-top: 30px;
-}
-
-Version 1.2 - Mondlicht Hintergrund
-.logo {
-    margin-bottom: 30px;
-}
-
-.logo h1 {
-    font-size: 80px;
-    color: #e0e0e0;
-    letter-spacing: 10px;
-    text-transform: uppercase;
-    text-shadow:
-        0 0 10px #ffffff,
-        0 0 25px #8b0000,
-        0 0 50px #400000;
-}
-
-.subtitle {
-    font-size: 32px;
-    color: #990000;
-    letter-spacing: 5px;
-    margin-top: 20px;
-    text-shadow: 0 0 15px #660000;
-}
-
-    to {
-        transform: translateX(20%);
-    }
-}
-.logo img {
-    width: 180px;
-    height: auto;
+    color: #dddddd;
 }
