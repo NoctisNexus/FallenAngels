@@ -1,41 +1,18 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-
-    background-image: url("c2143bdc-870e-4995-98d0-672885898439.png");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-
-    background-repeat: no-repeat;
+    background: #000;
+    display: flex;
+    justify-content: center;
 }
 
-
-/* Logo rechts */
-
-header {
-    position: absolute;
-    top: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
-}
-
-
-.banner-logo {
-    width: 500px;
-    max-width: 80vw;
+.homepage {
+    width: 100%;
+    max-width: 1920px;
     height: auto;
-}
-
-
-/* Hauptbild */
-
-.hero {
-    min-height: 100vh;
+    display: block;
 }
