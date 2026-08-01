@@ -47,25 +47,7 @@ h2 {
     margin-top: 30px;
 }
 
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-
-    background:
-        radial-gradient(circle at 75% 20%, 
-        rgba(220,220,220,0.18) 0%,
-        rgba(120,120,120,0.08) 8%,
-        transparent 18%),
-
-        radial-gradient(circle at top, 
-        #3a0000 0%,
-        #080808 45%,
-        #000000 100%);
-
-    opacity: 1;
-    z-index: -1;
-}
+Version 1.2 - Mondlicht Hintergrund
 .logo {
     margin-bottom: 30px;
 }
