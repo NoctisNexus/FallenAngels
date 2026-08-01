@@ -5,147 +5,35 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Cinzel', serif;
-    color: white;
+    min-height: 100vh;
+
     background-image: url("c2143bdc-870e-4995-98d0-672885898439.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    min-height: 100vh;
+
+    background-repeat: no-repeat;
 }
 
 
-/* Kopfbereich */
+/* Logo rechts */
 
 header {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 50px;
+    top: 40px;
+    right: 60px;
     z-index: 10;
 }
 
 
-/* Logo oben links */
-
 .logo {
-    width: 160px;
+    width: 260px;
     height: auto;
 }
 
 
-/* Navigation */
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 35px;
-    font-size: 18px;
-    letter-spacing: 2px;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #990000;
-}
-
-
-/* Startbereich */
+/* Hauptbild */
 
 .hero {
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    padding-bottom: 120px;
-}
-
-
-/* Textbereich */
-
-.content {
-    width: 600px;
-    text-align: center;
-    margin-left: 450px;
-    margin-bottom: 40px;
-}
-
-
-/* Haupttitel */
-
-.content h1 {
-    font-size: 70px;
-    letter-spacing: 10px;
-    margin: 0;
-    color: #ffffff;
-    text-shadow:
-        0 0 10px #ffffff,
-        0 0 30px #8b0000,
-        0 0 60px #400000;
-}
-
-
-/* Untertitel */
-
-.content h2 {
-    font-size: 30px;
-    letter-spacing: 5px;
-    margin-top: 25px;
-    color: #990000;
-    text-shadow:
-        0 0 15px #660000;
-}
-
-
-/* Musikrichtung */
-
-.content p {
-    margin-top: 40px;
-    font-size: 22px;
-    color: #cccccc;
-    letter-spacing: 2px;
-}
-
-
-/* Slogan */
-
-.slogan {
-    margin-top: 35px;
-    font-size: 22px;
-    line-height: 1.6;
-    font-style: italic;
-    color: #dddddd;
-    text-shadow:
-        0 0 10px black;
-}
-
-
-/* Handy Ansicht */
-
-@media (max-width: 900px) {
-
-    header {
-        padding: 20px;
-    }
-
-    .hero {
-        justify-content: center;
-        padding-right: 0;
-    }
-
-    .content {
-        width: 90%;
-    }
-
-    .content h1 {
-        font-size: 45px;
-    }
-
-    nav {
-        display: none;
-    }
 }
