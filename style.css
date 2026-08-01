@@ -52,8 +52,8 @@ body::before {
     position: fixed;
     inset: 0;
     background:
-        radial-gradient(circle, #300000 0%, #000000 70%);
-    opacity: 0.8;
+        radial-gradient(circle at top, #3a0000 0%, #080808 45%, #000000 100%);
+    opacity: 0.9;
     z-index: -1;
 }
 .logo {
@@ -78,29 +78,6 @@ body::before {
     margin-top: 20px;
     text-shadow: 0 0 15px #660000;
 }
-.bats {
-    position: fixed;
-    top: 20%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: -1;
-}
-
-.bats::before {
-    content: "🦇     🦇          🦇              🦇";
-    position: absolute;
-    width: 100%;
-    font-size: 35px;
-    opacity: 0.15;
-    animation: fly 12s infinite linear;
-}
-
-@keyframes fly {
-    from {
-        transform: translateX(-20%);
-    }
 
     to {
         transform: translateX(20%);
