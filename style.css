@@ -3,7 +3,7 @@ body {
     padding: 0;
     font-family: 'Cinzel', serif;
     color: white;
-    background-image: url("images/background.jpg");
+  background-image: url("c2143bdc-870e-4995-98d0-672885898439.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -76,4 +76,8 @@ Version 1.2 - Mondlicht Hintergrund
     to {
         transform: translateX(20%);
     }
+}
+.logo img {
+    width: 180px;
+    height: auto;
 }
