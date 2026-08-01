@@ -1,11 +1,13 @@
 body {
-    background-color: #000000;
-    color: #d0d0d0;
-    font-family: "Times New Roman", serif;
     margin: 0;
     padding: 0;
-    height: 100vh;
-    overflow: hidden;
+    font-family: 'Cinzel', serif;
+    color: white;
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 
 .hero {
