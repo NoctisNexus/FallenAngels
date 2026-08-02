@@ -1,18 +1,65 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body{
+    margin:0;
+    background:#000;
 }
 
-body {
-    background: #000;
-    display: flex;
-    justify-content: center;
+.homepage-container{
+    position:relative;
+    width:100%;
+    max-width:1600px;
+    margin:auto;
 }
 
-.homepage {
-    width: 100%;
-    max-width: 1920px;
-    height: auto;
-    display: block;
+.homepage{
+    width:100%;
+    display:block;
+}
+
+/* gemeinsame Einstellungen */
+
+.link{
+    position:absolute;
+    display:block;
+}
+
+/* Musik */
+
+.musik{
+    left:6.5%;
+    top:54%;
+    width:20%;
+    height:34%;
+}
+
+/* Über uns */
+
+.ueberuns{
+    left:28.5%;
+    top:54%;
+    width:20%;
+    height:34%;
+}
+
+/* Galerie */
+
+.galerie{
+    left:50.5%;
+    top:54%;
+    width:20%;
+    height:34%;
+}
+
+/* Gästebuch */
+
+.gaestebuch{
+    left:72.5%;
+    top:54%;
+    width:20%;
+    height:34%;
+}
+
+/* Zum Testen */
+
+.link:hover{
+    background:rgba(255,0,0,.15);
 }
