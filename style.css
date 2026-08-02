@@ -1,47 +1,125 @@
-body{
+/* ========================= */
+/* Grundeinstellungen */
+/* ========================= */
+
+*{
     margin:0;
     padding:0;
+    box-sizing:border-box;
+}
+
+body{
     background:#000;
-    color:#e5e5e5;
+    color:#ddd;
     font-family:Georgia, serif;
 }
 
-.seite{
+/* ========================= */
+/* Startseite */
+/* ========================= */
+
+.homepage-container{
+    position:relative;
+    width:80%;
     max-width:1200px;
+    margin:30px auto;
+}
+
+.homepage{
+    width:100%;
+    display:block;
+    border-radius:10px;
+}
+
+/* Klickbereiche */
+
+.link{
+    position:absolute;
+    display:block;
+}
+
+/* Musik */
+
+.musik{
+    left:6.5%;
+    top:54%;
+    width:20%;
+    height:34%;
+}
+
+/* Über uns */
+
+.ueberuns{
+    left:28.5%;
+    top:54%;
+    width:20%;
+    height:34%;
+}
+
+/* Galerie */
+
+.galerie{
+    left:50.5%;
+    top:54%;
+    width:20%;
+    height:34%;
+}
+
+/* Gästebuch */
+
+.gaestebuch{
+    left:72.5%;
+    top:54%;
+    width:20%;
+    height:34%;
+}
+
+/* Zum Testen - später entfernen */
+
+.link:hover{
+    background:rgba(255,0,0,.15);
+}
+
+/* ========================= */
+/* Unterseiten */
+/* ========================= */
+
+.seite{
+    max-width:1100px;
     margin:40px auto;
     padding:20px;
     text-align:center;
 }
 
 .banner{
-    width:70%;
-    max-width:700px;
+    width:65%;
+    max-width:650px;
     display:block;
-    margin:0 auto 40px auto;
+    margin:0 auto 40px;
 }
 
 h1{
     color:#b30000;
-    font-size:42px;
-    margin-bottom:15px;
+    font-size:40px;
+    margin-bottom:20px;
 }
 
 h2{
-    color:#d0d0d0;
-    margin:50px 0 30px;
+    color:#d8d8d8;
+    margin:40px 0 25px;
 }
 
 .text{
     font-size:22px;
     font-style:italic;
-    color:#cfcfcf;
     margin-bottom:40px;
+    color:#cfcfcf;
 }
 
 .song-grid{
     display:flex;
     justify-content:center;
-    gap:35px;
+    gap:30px;
     flex-wrap:wrap;
 }
 
@@ -51,19 +129,18 @@ h2{
     border:1px solid #555;
     border-radius:12px;
     padding:25px;
-    box-shadow:0 0 20px rgba(0,0,0,.7);
+    box-shadow:0 0 20px rgba(0,0,0,.6);
     transition:.3s;
 }
 
 .karte:hover{
     transform:translateY(-8px);
     border-color:#b30000;
-    box-shadow:0 0 25px rgba(179,0,0,.5);
+    box-shadow:0 0 25px rgba(179,0,0,.45);
 }
 
 .cover{
     width:200px;
-    max-width:100%;
     height:auto;
     display:block;
     margin:0 auto 20px;
@@ -71,22 +148,21 @@ h2{
 }
 
 .karte h3{
-    color:white;
-    margin:15px 0;
+    color:#fff;
+    margin-bottom:15px;
 }
 
 .karte p{
     color:#c0c0c0;
     line-height:1.6;
-    margin-bottom:20px;
 }
 
 .button{
     display:inline-block;
-    padding:10px 24px;
-    margin-top:10px;
+    margin-top:20px;
+    padding:12px 24px;
     background:#7a0000;
-    color:white;
+    color:#fff;
     text-decoration:none;
     border-radius:8px;
     transition:.3s;
@@ -96,19 +172,27 @@ h2{
     background:#b30000;
 }
 
+/* ========================= */
+/* Smartphone */
+/* ========================= */
+
 @media(max-width:900px){
 
-.banner{
-    width:90%;
-}
+    .homepage-container{
+        width:95%;
+    }
 
-.song-grid{
-    flex-direction:column;
-    align-items:center;
-}
+    .banner{
+        width:90%;
+    }
 
-.karte{
-    width:90%;
-}
+    .song-grid{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .karte{
+        width:90%;
+    }
 
 }
