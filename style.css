@@ -76,11 +76,11 @@ body{
 }
 
 .banner{
-    width:100%;
-    max-width:900px;
-    margin-bottom:40px;
+    width:60%;
+    max-width:650px;
+    margin:20px auto 50px auto;
+    display:block;
 }
-
 h1{
     color:#d6d6d6;
     font-size:42px;
