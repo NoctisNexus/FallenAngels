@@ -2,7 +2,9 @@
    FALLENANGELS
    Gothic Edition
 ========================================= */
-
+body {
+    background: red !important;
+}
 
 /* Grundlayout */
 
