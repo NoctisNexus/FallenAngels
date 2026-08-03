@@ -1,526 +1,65 @@
-/* =========================================
-   FALLENANGELS
-   Gothic Edition
-========================================= */
-
-
-/* Grundlayout */
-
-* {
+body{
     margin:0;
-    padding:0;
-    box-sizing:border-box;
+    background:#000;
 }
 
-
-html,
-body {
-
-    width:100%;
-    min-height:100%;
-
-    background:#030303;
-
-    color:#c0c0c0;
-
-    font-family:'Cormorant Garamond', serif;
-
-}
-
-
-
-main {
-
-    width:100%;
-
-}
-
-
-
-
-
-/* =========================================
-   HOMEPAGE BILD
-========================================= */
-
-
-.homepage-container {
-
+.homepage-container{
     position:relative;
-
     width:100%;
-
-    max-width:1200px;
-
-    margin:0 auto;
-
+    max-width:1600px;
+    margin:auto;
 }
 
-
-
-.homepage {
-
+.homepage{
     width:100%;
-
-    height:auto;
-
     display:block;
-
 }
 
+/* gemeinsame Einstellungen */
 
-
-
-
-
-/* =========================================
-   UNSICHTBARE BUTTONS
-========================================= */
-
-
-.link {
-
+.link{
     position:absolute;
-
     display:block;
-
-    z-index:5;
-
-    transition:0.3s ease;
-
 }
 
+/* Musik */
 
-
-/* nur dezenter Glow */
-
-.link:hover {
-
-    filter:drop-shadow(0 0 12px rgba(139,0,0,.8));
-
+.musik{
+    left:6.5%;
+    top:54%;
+    width:20%;
+    height:34%;
 }
 
+/* Über uns */
 
-
-
-
-.musik {
-
-    top:20%;
-
-    left:10%;
-
-    width:25%;
-
-    height:25%;
-
+.ueberuns{
+    left:28.5%;
+    top:54%;
+    width:20%;
+    height:34%;
 }
 
+/* Galerie */
 
-
-.ueberuns {
-
-    top:20%;
-
-    right:10%;
-
-    width:25%;
-
-    height:25%;
-
+.galerie{
+    left:50.5%;
+    top:54%;
+    width:20%;
+    height:34%;
 }
 
+/* Gästebuch */
 
-
-.galerie {
-
-    bottom:20%;
-
-    left:10%;
-
-    width:25%;
-
-    height:25%;
-
+.gaestebuch{
+    left:72.5%;
+    top:54%;
+    width:20%;
+    height:34%;
 }
 
+/* Zum Testen */
 
-
-.gaestebuch {
-
-    bottom:20%;
-
-    right:10%;
-
-    width:25%;
-
-    height:25%;
-
-}
-
-
-
-
-
-
-/* =========================================
-   BESUCHER DER VERLORENEN SEELEN
-========================================= */
-
-
-.visitor-box {
-
-
-    width:240px;
-
-
-    margin:45px auto;
-
-
-    padding:25px 18px;
-
-
-    text-align:center;
-
-
-    position:relative;
-
-
-
-    background:
-
-
-    linear-gradient(
-
-        135deg,
-
-        #1a1a1a,
-
-        #080808
-
-    );
-
-
-
-    border:1px solid #555;
-
-
-
-    box-shadow:
-
-
-    inset 0 0 25px #000,
-
-
-    0 0 20px rgba(100,0,0,.4);
-
-
-
-}
-
-
-
-
-.visitor-box::before {
-
-    content:"";
-
-    position:absolute;
-
-    inset:7px;
-
-    border:1px solid rgba(192,192,192,.18);
-
-}
-
-
-
-
-.visitor-symbol {
-
-    color:#8b0000;
-
-    font-size:20px;
-
-    text-shadow:
-
-    0 0 10px #700;
-
-}
-
-
-
-
-
-.visitor-box h2 {
-
-    position:relative;
-
-    margin:12px 0;
-
-    font-family:'Cinzel',serif;
-
-    font-size:13px;
-
-    letter-spacing:2px;
-
-    text-transform:uppercase;
-
-    color:#c5c5c5;
-
-}
-
-
-
-
-
-.visitor-number {
-
-    position:relative;
-
-    font-family:'Cinzel',serif;
-
-    font-size:36px;
-
-    letter-spacing:6px;
-
-    color:#d8d8d8;
-
-
-
-    text-shadow:
-
-
-    2px 2px 4px #000,
-
-
-    0 0 15px rgba(255,255,255,.25),
-
-
-    0 0 20px rgba(139,0,0,.5);
-
-
-
-}
-
-
-
-
-.visitor-box p {
-
-    position:relative;
-
-    margin-top:12px;
-
-    color:#888;
-
-    font-size:14px;
-
-    font-style:italic;
-
-}
-
-
-
-
-
-
-
-
-/* =========================================
-   FALLENANGELS SIGNATUR
-========================================= */
-
-
-.fallen-footer {
-
-
-    text-align:center;
-
-
-    padding:70px 0 40px;
-
-
-}
-
-
-
-
-.footer-line {
-
-
-    width:170px;
-
-
-    height:1px;
-
-
-    margin:20px auto;
-
-
-
-    background:
-
-
-    linear-gradient(
-
-        90deg,
-
-        transparent,
-
-        #777,
-
-        transparent
-
-    );
-
-
-}
-
-
-
-
-
-.fallen-logo {
-
-
-    display:flex;
-
-
-    justify-content:center;
-
-
-    align-items:center;
-
-
-    gap:18px;
-
-
-
-    font-family:'Cinzel',serif;
-
-
-    font-size:65px;
-
-
-    letter-spacing:12px;
-
-
-
-    color:#d0d0d0;
-
-
-
-    text-shadow:
-
-
-    0 3px 5px #000,
-
-
-    0 0 15px rgba(255,255,255,.25),
-
-
-    0 0 40px rgba(139,0,0,.6);
-
-
-
-}
-
-
-
-
-
-.fallen-logo span {
-
-
-    color:#8b0000;
-
-
-    font-size:34px;
-
-
-    text-shadow:
-
-
-    0 0 15px rgba(139,0,0,.8);
-
-
-}
-
-
-
-
-
-.footer-name {
-
-
-    margin-top:15px;
-
-
-    font-family:'Cinzel',serif;
-
-
-    font-size:18px;
-
-
-    letter-spacing:7px;
-
-
-    color:#999;
-
-
-    text-transform:uppercase;
-
-
-}
-
-
-
-
-
-.fallen-footer p {
-
-
-    margin-top:25px;
-
-
-    color:#555;
-
-
-    font-size:12px;
-
-
-}
-
-
-
-
-
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-
-@media(max-width:700px){
-
-
-    .visitor-box {
-
-        width:85%;
-
-    }
-
-
-
-    .fallen-logo {
-
-        font-size:42px;
-
-        letter-spacing:6px;
-
-    }
-
-
+.link:hover{
+    background:rgba(255,0,0,.15);
 }
