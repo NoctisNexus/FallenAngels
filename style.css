@@ -7,20 +7,16 @@
 /* Grundlayout */
 
 * {
-
     margin:0;
     padding:0;
     box-sizing:border-box;
-
 }
-
 
 
 html,
 body {
 
     width:100%;
-
     min-height:100%;
 
     background:#030303;
@@ -30,7 +26,6 @@ body {
     font-family:'Cormorant Garamond', serif;
 
 }
-
 
 
 main {
@@ -69,7 +64,6 @@ main {
     display:block;
 
 }
-
 
 
 
@@ -163,6 +157,7 @@ main {
 
 
 
+
 /* =========================================
    BESUCHERBEREICH
 ========================================= */
@@ -174,9 +169,10 @@ main {
 
     text-align:center;
 
-    margin-top:50px;
+    margin-top:55px;
 
 }
+
 
 
 
@@ -190,30 +186,33 @@ main {
 
 .fa-logo {
 
-    width:140px;
+    width:120px;
 
     max-width:40%;
 
     height:auto;
 
 
+
     display:block;
 
 
-    margin:0 auto 25px;
+    margin:0 auto 30px;
 
 
 
     filter:
 
 
-    drop-shadow(0 0 8px rgba(255,255,255,.25))
+    drop-shadow(0 0 10px rgba(255,255,255,.25))
 
 
-    drop-shadow(0 0 18px rgba(139,0,0,.5));
+    drop-shadow(0 0 20px rgba(139,0,0,.55));
+
 
 
 }
+
 
 
 
@@ -230,7 +229,7 @@ main {
     position:relative;
 
 
-    width:220px;
+    width:280px;
 
 
     margin:0 auto;
@@ -238,6 +237,8 @@ main {
 
 
 }
+
+
 
 
 
@@ -257,10 +258,10 @@ main {
     filter:
 
 
-    drop-shadow(0 20px 25px #000)
+    drop-shadow(0 20px 30px #000)
 
 
-    drop-shadow(0 0 18px rgba(139,0,0,.45));
+    drop-shadow(0 0 20px rgba(139,0,0,.5));
 
 
 
@@ -270,7 +271,11 @@ main {
 
 
 
-/* Besucherzahl auf Grabstein */
+
+
+/* =========================================
+   BESUCHERZAHL
+========================================= */
 
 
 .visitor-number {
@@ -279,10 +284,13 @@ main {
     position:absolute;
 
 
+
     top:48%;
 
 
+
     left:50%;
+
 
 
     transform:translate(-50%,-50%);
@@ -293,28 +301,28 @@ main {
 
 
 
-    font-size:30px;
+    font-size:34px;
 
 
 
-    letter-spacing:5px;
+    letter-spacing:6px;
 
 
 
-    color:#d8d8d8;
+    color:#dddddd;
 
 
 
     text-shadow:
 
 
-    2px 2px 5px #000,
+    2px 3px 6px #000,
 
 
-    0 0 12px rgba(255,255,255,.35),
+    0 0 15px rgba(255,255,255,.35),
 
 
-    0 0 20px rgba(139,0,0,.6);
+    0 0 25px rgba(139,0,0,.7);
 
 
 
@@ -337,7 +345,7 @@ footer {
     text-align:center;
 
 
-    margin-top:50px;
+    margin-top:55px;
 
 
     padding-bottom:30px;
@@ -366,12 +374,9 @@ footer {
 @media(max-width:700px){
 
 
-
     .fa-logo {
 
-
-        width:100px;
-
+        width:95px;
 
     }
 
@@ -379,9 +384,7 @@ footer {
 
     .grave-container {
 
-
-        width:180px;
-
+        width:220px;
 
     }
 
@@ -389,9 +392,7 @@ footer {
 
     .visitor-number {
 
-
-        font-size:24px;
-
+        font-size:26px;
 
     }
 
