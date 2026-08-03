@@ -1,7 +1,23 @@
-body{
+/* ========================================= */
+/* FallenAngels Version 2.0                  */
+/* Teil 1 - Grunddesign                      */
+/* ========================================= */
+
+/* ---------- Grundeinstellungen ---------- */
+
+*{
     margin:0;
-    background:#000;
+    padding:0;
+    box-sizing:border-box;
 }
+
+body{
+    background:#000;
+    color:#d6d6d6;
+    font-family:Georgia, serif;
+}
+
+/* ---------- Startseite ---------- */
 
 .homepage-container{
     position:relative;
@@ -15,11 +31,16 @@ body{
     display:block;
 }
 
-/* gemeinsame Einstellungen */
+/* ---------- Klickbereiche ---------- */
 
 .link{
     position:absolute;
     display:block;
+    transition:.3s;
+}
+
+.link:hover{
+    background:rgba(179,0,0,.15);
 }
 
 /* Musik */
@@ -58,67 +79,212 @@ body{
     height:34%;
 }
 
-/* Zum Testen */
-
-.link:hover{
-    background:rgba(255,0,0,.15);
-}
-/* ========================= */
-/* Unterseiten */
-/* ========================= */
+/* ---------- Unterseiten ---------- */
 
 .seite{
-    max-width:1100px;
+    max-width:1200px;
     margin:40px auto;
     padding:20px;
     text-align:center;
-    color:white;
 }
 
 .banner{
     width:60%;
     max-width:650px;
-    margin:20px auto 50px auto;
     display:block;
+    margin:0 auto 50px;
 }
+
 h1{
-    color:#d6d6d6;
+    color:#d8d8d8;
     font-size:42px;
     margin-bottom:20px;
     letter-spacing:2px;
 }
 
-.text{
-    font-size:22px;
-    color:#c0c0c0;
-    margin-bottom:50px;
-    line-height:1.6;
+h2{
+    color:#b30000;
+    margin-bottom:15px;
 }
+
+h3{
+    color:#ffffff;
+    margin:15px 0;
+}
+
+.text{
+    color:#c0c0c0;
+    font-size:22px;
+    line-height:1.6;
+    margin-bottom:50px;
+}
+
+/* ========================================= */
+/* Musik                                    */
+/* ========================================= */
+
+.song-grid{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    gap:35px;
+
+    flex-wrap:wrap;
+
+}
+
+/* ---------- Karten ---------- */
 
 .karte{
-    background:rgba(255,255,255,0.05);
+
+    width:320px;
+
+    background:#151515;
+
     border:1px solid #5a5a5a;
+
     border-radius:12px;
-    padding:30px;
-    margin:30px auto;
-    max-width:800px;
+
+    padding:25px;
+
+    transition:.3s;
+
+    box-shadow:0 0 15px rgba(0,0,0,.6);
+
 }
 
-.karte h2{
-    color:#b30000;
+.karte:hover{
+
+    border-color:#8b0000;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 0 25px rgba(139,0,0,.4);
+
 }
+
+.cover{
+
+    width:200px;
+
+    height:200px;
+
+    object-fit:cover;
+
+    display:block;
+
+    margin:0 auto 20px;
+
+    border-radius:10px;
+
+    border:1px solid #444;
+
+}
+
+.karte p{
+
+    color:#c5c5c5;
+
+    line-height:1.6;
+
+}
+
+/* ---------- Buttons ---------- */
 
 .button{
+
     display:inline-block;
-    margin-top:40px;
-    padding:15px 35px;
+
+    margin-top:35px;
+
+    padding:14px 30px;
+
     border:1px solid #8b0000;
-    color:white;
+
+    color:#ffffff;
+
     text-decoration:none;
-    font-size:18px;
-    transition:0.3s;
+
+    transition:.3s;
+
+    border-radius:6px;
+
 }
 
 .button:hover{
+
     background:#8b0000;
+
+}
+
+/* ========================================= */
+/* Besucherbereich                           */
+/* ========================================= */
+
+.visitor-box{
+
+    width:520px;
+
+    max-width:90%;
+
+    margin:60px auto;
+
+    padding:30px;
+
+    text-align:center;
+
+    background:#111;
+
+    border:2px solid #660000;
+
+    border-radius:12px;
+
+    box-shadow:0 0 25px rgba(139,0,0,.35);
+
+}
+
+.visitor-title{
+
+    color:#d8d8d8;
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+}
+
+.visitor-number{
+
+    display:inline-block;
+
+    padding:15px 35px;
+
+    background:#050505;
+
+    border:1px solid #555;
+
+    border-radius:8px;
+
+    font-size:34px;
+
+    letter-spacing:6px;
+
+    font-family:"Courier New", monospace;
+
+    color:#ffffff;
+
+}
+
+.visitor-text{
+
+    margin-top:20px;
+
+    color:#aaaaaa;
+
+    font-style:italic;
+
 }
