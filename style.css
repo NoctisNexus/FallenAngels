@@ -76,9 +76,10 @@ body{
 }
 
 .banner{
-    width:100%;
-    max-width:900px;
-    margin-bottom:40px;
+    width:70%;
+    max-width:700px;
+    margin:0 auto 40px auto;
+    display:block;
 }
 
 h1{
