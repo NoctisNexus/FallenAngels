@@ -1,243 +1,461 @@
-/* ===================================== */
-/* Grundeinstellungen                    */
-/* ===================================== */
+/* ===================================
+   FallenAngels Version 2.0
+   Startseite
+=================================== */
 
-*{
+
+/* Grundlayout */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+
     margin:0;
+
     padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    background:#000;
-    color:#d7d7d7;
-    font-family:"Cormorant Garamond", serif;
-    font-size:22px;
-    line-height:1.6;
-}
-
-main{
-    width:100%;
-}
-
-/* ===================================== */
-/* Startseite                            */
-/* ===================================== */
-
-.homepage-container{
-    position:relative;
-    width:80%;
-    max-width:1200px;
-    margin:40px auto;
-}
-
-.homepage{
-    width:100%;
-    display:block;
-    border-radius:12px;
-    box-shadow:0 0 30px rgba(120,0,0,.35);
-}
-
-/* ===================================== */
-/* Klickbereiche                         */
-/* ===================================== */
-
-.link{
-    position:absolute;
-    display:block;
-    transition:.3s;
-}
-
-/* Zum Testen – später entfernen */
-
-.link:hover{
-    background:rgba(179,0,0,.15);
-}
-
-/* Musik */
-
-.musik{
-    left:6.5%;
-    top:54%;
-    width:20%;
-    height:34%;
-}
-
-/* Über uns */
-
-.ueberuns{
-    left:28.5%;
-    top:54%;
-    width:20%;
-    height:34%;
-}
-
-/* Galerie */
-
-.galerie{
-    left:50.5%;
-    top:54%;
-    width:20%;
-    height:34%;
-}
-
-/* Gästebuch */
-
-.gaestebuch{
-    left:72.5%;
-    top:54%;
-    width:20%;
-    height:34%;
-}
-
-/* ===================================== */
-/* Besucherbereich                       */
-/* ===================================== */
-
-.visitor-box{
-
-    width:520px;
-    max-width:92%;
-
-    margin:70px auto;
-
-    padding:35px;
-
-    text-align:center;
-
-    background:linear-gradient(#181818,#0c0c0c);
-
-    border:2px solid #680000;
-
-    border-radius:15px;
-
-    box-shadow:
-        0 0 30px rgba(120,0,0,.35),
-        inset 0 0 20px rgba(255,255,255,.04);
-
-}
-
-.visitor-line{
-
-    width:80%;
-
-    height:1px;
-
-    background:#680000;
-
-    margin:0 auto 25px;
-
-}
-
-.visitor-box h2{
-
-    font-family:"Cinzel", serif;
-
-    color:#e3e3e3;
-
-    font-size:34px;
-
-    margin-bottom:25px;
-
-    letter-spacing:2px;
-
-}
-
-.visitor-number{
-
-    display:inline-block;
-
-    min-width:240px;
-
-    padding:15px 35px;
 
     background:#050505;
 
-    border:1px solid #555;
+    color:#c0c0c0;
 
-    border-radius:10px;
-
-    color:#f0f0f0;
-
-    font-family:"Courier New", monospace;
-
-    font-size:38px;
-
-    letter-spacing:8px;
-
-    box-shadow:
-        inset 0 0 15px rgba(255,255,255,.05),
-        0 0 15px rgba(179,0,0,.25);
+    font-family:'Cormorant Garamond', serif;
 
 }
 
-.visitor-box p{
 
-    margin-top:25px;
 
-    color:#aaaaaa;
+main {
 
-    font-style:italic;
+    width:100%;
+
+    overflow:hidden;
 
 }
 
-/* ===================================== */
-/* Footer                                */
-/* ===================================== */
 
-footer{
+
+
+
+/* ===================================
+   Homepage Bild
+=================================== */
+
+
+.homepage-container {
+
+    position:relative;
+
+    width:100%;
+
+    max-width:1200px;
+
+    margin:0 auto;
+
+}
+
+
+
+.homepage {
+
+    display:block;
+
+    width:100%;
+
+    height:auto;
+
+}
+
+
+
+
+
+
+/* ===================================
+   Unsichtbare Klickfelder
+=================================== */
+
+
+.link {
+
+    position:absolute;
+
+    display:block;
+
+    z-index:5;
+
+}
+
+
+
+/*
+ Positionen müssen eventuell
+ an dein Bild angepasst werden
+*/
+
+
+.musik {
+
+    top:20%;
+
+    left:10%;
+
+    width:20%;
+
+    height:25%;
+
+}
+
+
+.ueberuns {
+
+    top:20%;
+
+    right:10%;
+
+    width:20%;
+
+    height:25%;
+
+}
+
+
+.galerie {
+
+    bottom:20%;
+
+    left:10%;
+
+    width:20%;
+
+    height:25%;
+
+}
+
+
+.gaestebuch {
+
+    bottom:20%;
+
+    right:10%;
+
+    width:20%;
+
+    height:25%;
+
+}
+
+
+
+
+
+
+/* ===================================
+   Besucher der verlorenen Seelen
+=================================== */
+
+
+.visitor-box {
+
+
+    width:280px;
+
+
+    margin:45px auto;
+
+
+    padding:22px;
+
 
     text-align:center;
 
-    margin:60px 0 40px;
+
+    background:
+
+    linear-gradient(
+        145deg,
+        #111,
+        #050505
+    );
+
+
+    border:1px solid #555;
+
+
+    box-shadow:
+
+    0 0 20px rgba(120,0,0,0.25),
+    inset 0 0 20px rgba(0,0,0,0.8);
+
+
+    position:relative;
+
 
 }
 
-.footer-logo{
 
-    font-family:"Cinzel", serif;
 
-    font-size:40px;
+.visitor-box::before {
 
-    color:#7a0000;
 
-    letter-spacing:8px;
+    content:"";
 
-    margin-bottom:10px;
+
+    position:absolute;
+
+
+    inset:7px;
+
+
+    border:1px solid rgba(192,192,192,0.12);
+
 
 }
 
-footer p{
 
-    color:#888;
+
+
+.visitor-symbol {
+
+
+    color:#8b0000;
+
 
     font-size:18px;
 
+
+    margin:5px;
+
+
 }
 
-/* ===================================== */
-/* Smartphone                            */
-/* ===================================== */
 
-@media(max-width:900px){
 
-    .homepage-container{
-        width:95%;
+.visitor-box h2 {
+
+
+    position:relative;
+
+
+    font-family:'Cinzel', serif;
+
+
+    font-size:15px;
+
+
+    font-weight:500;
+
+
+    letter-spacing:1px;
+
+
+    color:#c0c0c0;
+
+
+    margin:12px 0;
+
+
+
+}
+
+
+
+
+.visitor-number {
+
+
+    position:relative;
+
+
+    font-family:'Cormorant Garamond', serif;
+
+
+    font-size:38px;
+
+
+    letter-spacing:5px;
+
+
+    color:#d0d0d0;
+
+
+    text-shadow:
+
+
+    0 0 8px rgba(255,255,255,.2),
+    0 0 15px rgba(139,0,0,.4);
+
+
+
+}
+
+
+
+.visitor-box p {
+
+
+    position:relative;
+
+
+    color:#888;
+
+
+    font-size:14px;
+
+
+    font-style:italic;
+
+
+    margin:12px 0 5px;
+
+
+}
+
+
+
+
+
+/* ===================================
+   FallenAngels Footer Logo
+=================================== */
+
+
+.fallen-footer {
+
+
+    text-align:center;
+
+
+    padding:40px 0;
+
+
+}
+
+
+
+.footer-line {
+
+
+    width:120px;
+
+
+    height:1px;
+
+
+    background:#555;
+
+
+    margin:15px auto;
+
+
+}
+
+
+
+
+
+.fallen-logo {
+
+
+    font-family:'Cinzel', serif;
+
+
+    font-size:32px;
+
+
+    letter-spacing:8px;
+
+
+    color:#c0c0c0;
+
+
+    text-shadow:
+
+
+    0 0 10px rgba(255,255,255,.25);
+
+
+}
+
+
+
+
+.fallen-logo span {
+
+
+    color:#8b0000;
+
+
+    font-size:22px;
+
+
+}
+
+
+
+
+.footer-name {
+
+
+    margin-top:8px;
+
+
+    font-size:14px;
+
+
+    letter-spacing:4px;
+
+
+    color:#777;
+
+
+}
+
+
+
+
+
+.fallen-footer p {
+
+
+    color:#555;
+
+
+    font-size:13px;
+
+
+    margin-top:15px;
+
+
+}
+
+
+
+
+
+/* ===================================
+   Mobile
+=================================== */
+
+
+@media(max-width:700px) {
+
+
+    .visitor-box {
+
+        width:85%;
+
     }
 
-    .visitor-box{
-        width:95%;
-        padding:25px;
+
+    .fallen-logo {
+
+        font-size:26px;
+
     }
 
-    .visitor-box h2{
-        font-size:28px;
-    }
-
-    .visitor-number{
-        font-size:30px;
-        letter-spacing:5px;
-        min-width:200px;
-    }
 
 }
