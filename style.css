@@ -169,7 +169,7 @@ main {
 
     text-align:center;
 
-    margin-top:55px;
+    margin-top:60px;
 
 }
 
@@ -186,9 +186,9 @@ main {
 
 .fa-logo {
 
-    width:120px;
+    width:180px;
 
-    max-width:40%;
+    max-width:50%;
 
     height:auto;
 
@@ -197,17 +197,18 @@ main {
     display:block;
 
 
-    margin:0 auto 30px;
+
+    margin:0 auto 35px;
 
 
 
     filter:
 
 
-    drop-shadow(0 0 10px rgba(255,255,255,.25))
+    drop-shadow(0 0 12px rgba(255,255,255,.25))
 
 
-    drop-shadow(0 0 20px rgba(139,0,0,.55));
+    drop-shadow(0 0 25px rgba(139,0,0,.65));
 
 
 
@@ -229,7 +230,7 @@ main {
     position:relative;
 
 
-    width:280px;
+    width:360px;
 
 
     margin:0 auto;
@@ -258,10 +259,10 @@ main {
     filter:
 
 
-    drop-shadow(0 20px 30px #000)
+    drop-shadow(0 25px 35px #000)
 
 
-    drop-shadow(0 0 20px rgba(139,0,0,.5));
+    drop-shadow(0 0 25px rgba(139,0,0,.55));
 
 
 
@@ -301,11 +302,11 @@ main {
 
 
 
-    font-size:34px;
+    font-size:42px;
 
 
 
-    letter-spacing:6px;
+    letter-spacing:8px;
 
 
 
@@ -319,10 +320,10 @@ main {
     2px 3px 6px #000,
 
 
-    0 0 15px rgba(255,255,255,.35),
+    0 0 18px rgba(255,255,255,.35),
 
 
-    0 0 25px rgba(139,0,0,.7);
+    0 0 30px rgba(139,0,0,.75);
 
 
 
@@ -345,10 +346,10 @@ footer {
     text-align:center;
 
 
-    margin-top:55px;
+    margin-top:60px;
 
 
-    padding-bottom:30px;
+    padding-bottom:35px;
 
 
 
@@ -374,9 +375,10 @@ footer {
 @media(max-width:700px){
 
 
+
     .fa-logo {
 
-        width:95px;
+        width:130px;
 
     }
 
@@ -384,7 +386,7 @@ footer {
 
     .grave-container {
 
-        width:220px;
+        width:280px;
 
     }
 
@@ -392,7 +394,7 @@ footer {
 
     .visitor-number {
 
-        font-size:26px;
+        font-size:30px;
 
     }
 
