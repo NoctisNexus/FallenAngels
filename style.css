@@ -1,22 +1,20 @@
-/* ===================================
-   FallenAngels Version 2.0
-   Startseite
-=================================== */
+/* =========================================
+   FALLENANGELS
+   Startseite Version 2.0
+========================================= */
 
 
-/* Grundlayout */
+/* Grundstruktur */
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 
 html,
 body {
-
-    margin:0;
-
-    padding:0;
 
     background:#050505;
 
@@ -27,12 +25,9 @@ body {
 }
 
 
+body {
 
-main {
-
-    width:100%;
-
-    overflow:hidden;
+    min-height:100vh;
 
 }
 
@@ -40,9 +35,17 @@ main {
 
 
 
-/* ===================================
-   Homepage Bild
-=================================== */
+/* =========================================
+   HOMEPAGE BILD
+========================================= */
+
+
+main {
+
+    width:100%;
+
+}
+
 
 
 .homepage-container {
@@ -61,11 +64,11 @@ main {
 
 .homepage {
 
-    display:block;
-
     width:100%;
 
     height:auto;
+
+    display:block;
 
 }
 
@@ -73,10 +76,9 @@ main {
 
 
 
-
-/* ===================================
-   Unsichtbare Klickfelder
-=================================== */
+/* =========================================
+   UNSICHTBARE KLICKBEREICHE
+========================================= */
 
 
 .link {
@@ -85,62 +87,63 @@ main {
 
     display:block;
 
-    z-index:5;
+    z-index:10;
 
 }
 
 
 
-/*
- Positionen müssen eventuell
- an dein Bild angepasst werden
-*/
 
+
+/* Positionen bei Bedarf anpassen */
 
 .musik {
 
     top:20%;
 
-    left:10%;
+    left:15%;
 
     width:20%;
 
     height:25%;
 
 }
+
 
 
 .ueberuns {
 
     top:20%;
 
-    right:10%;
+    right:15%;
 
     width:20%;
 
     height:25%;
 
 }
+
 
 
 .galerie {
 
     bottom:20%;
 
-    left:10%;
+    left:15%;
 
     width:20%;
 
     height:25%;
 
 }
+
 
 
 .gaestebuch {
 
     bottom:20%;
 
-    right:10%;
+    right:15%;
 
     width:20%;
 
@@ -153,21 +156,22 @@ main {
 
 
 
-/* ===================================
-   Besucher der verlorenen Seelen
-=================================== */
+
+/* =========================================
+   BESUCHER DER VERLORENEN SEELEN
+========================================= */
 
 
 .visitor-box {
 
 
-    width:280px;
+    width:220px;
 
 
-    margin:45px auto;
+    margin:35px auto 25px;
 
 
-    padding:22px;
+    padding:16px 12px;
 
 
     text-align:center;
@@ -177,18 +181,22 @@ main {
 
     linear-gradient(
         145deg,
-        #111,
-        #050505
+        #111111,
+        #030303
     );
 
 
-    border:1px solid #555;
+
+    border:1px solid rgba(192,192,192,0.25);
+
 
 
     box-shadow:
 
-    0 0 20px rgba(120,0,0,0.25),
-    inset 0 0 20px rgba(0,0,0,0.8);
+
+    0 0 15px rgba(120,0,0,0.25),
+    inset 0 0 15px rgba(255,255,255,0.04);
+
 
 
     position:relative;
@@ -207,7 +215,7 @@ main {
     position:absolute;
 
 
-    inset:7px;
+    inset:5px;
 
 
     border:1px solid rgba(192,192,192,0.12);
@@ -221,13 +229,13 @@ main {
 .visitor-symbol {
 
 
-    color:#8b0000;
+    color:#7a0000;
 
 
-    font-size:18px;
+    font-size:14px;
 
 
-    margin:5px;
+    line-height:1;
 
 
 }
@@ -240,10 +248,13 @@ main {
     position:relative;
 
 
-    font-family:'Cinzel', serif;
+    margin:8px 0;
 
 
-    font-size:15px;
+    font-family:'Cinzel',serif;
+
+
+    font-size:12px;
 
 
     font-weight:500;
@@ -252,11 +263,7 @@ main {
     letter-spacing:1px;
 
 
-    color:#c0c0c0;
-
-
-    margin:12px 0;
-
+    color:#bdbdbd;
 
 
 }
@@ -270,24 +277,23 @@ main {
     position:relative;
 
 
-    font-family:'Cormorant Garamond', serif;
+    font-family:'Cinzel',serif;
 
 
-    font-size:38px;
+    font-size:27px;
 
 
-    letter-spacing:5px;
+    letter-spacing:4px;
 
 
-    color:#d0d0d0;
+    color:#d5d5d5;
 
 
     text-shadow:
 
 
-    0 0 8px rgba(255,255,255,.2),
-    0 0 15px rgba(139,0,0,.4);
-
+    0 0 6px rgba(255,255,255,.25),
+    0 0 15px rgba(139,0,0,.35);
 
 
 }
@@ -300,16 +306,16 @@ main {
     position:relative;
 
 
-    color:#888;
+    margin-top:8px;
 
 
-    font-size:14px;
+    font-size:12px;
+
+
+    color:#777;
 
 
     font-style:italic;
-
-
-    margin:12px 0 5px;
 
 
 }
@@ -318,9 +324,11 @@ main {
 
 
 
-/* ===================================
-   FallenAngels Footer Logo
-=================================== */
+
+
+/* =========================================
+   FALLENANGELS SIGNATUR
+========================================= */
 
 
 .fallen-footer {
@@ -329,7 +337,7 @@ main {
     text-align:center;
 
 
-    padding:40px 0;
+    padding:45px 0 30px;
 
 
 }
@@ -339,16 +347,24 @@ main {
 .footer-line {
 
 
-    width:120px;
+    width:110px;
 
 
     height:1px;
 
 
-    background:#555;
+    margin:18px auto;
 
 
-    margin:15px auto;
+
+    background:
+
+    linear-gradient(
+        to right,
+        transparent,
+        #777,
+        transparent
+    );
 
 
 }
@@ -360,22 +376,36 @@ main {
 .fallen-logo {
 
 
-    font-family:'Cinzel', serif;
+    display:inline-flex;
 
 
-    font-size:32px;
+    align-items:center;
+
+
+    gap:12px;
+
+
+    font-family:'Cinzel',serif;
+
+
+    font-size:52px;
 
 
     letter-spacing:8px;
 
 
-    color:#c0c0c0;
+    color:#d0d0d0;
 
 
     text-shadow:
 
 
-    0 0 10px rgba(255,255,255,.25);
+    0 0 8px rgba(255,255,255,.35),
+    0 0 25px rgba(139,0,0,.45);
+
+
+
+    transition:.5s;
 
 
 }
@@ -389,10 +419,28 @@ main {
     color:#8b0000;
 
 
-    font-size:22px;
+    font-size:25px;
 
 
 }
+
+
+
+.fallen-logo:hover {
+
+
+    color:#ffffff;
+
+
+    text-shadow:
+
+
+    0 0 15px rgba(255,255,255,.5),
+    0 0 35px rgba(139,0,0,.8);
+
+
+}
+
 
 
 
@@ -400,20 +448,25 @@ main {
 .footer-name {
 
 
-    margin-top:8px;
+    margin-top:10px;
 
 
-    font-size:14px;
+    font-family:'Cormorant Garamond',serif;
 
 
-    letter-spacing:4px;
+    font-size:18px;
 
 
-    color:#777;
+    letter-spacing:6px;
+
+
+    text-transform:uppercase;
+
+
+    color:#888;
 
 
 }
-
 
 
 
@@ -421,13 +474,13 @@ main {
 .fallen-footer p {
 
 
+    margin-top:20px;
+
+
+    font-size:12px;
+
+
     color:#555;
-
-
-    font-size:13px;
-
-
-    margin-top:15px;
 
 
 }
@@ -436,12 +489,15 @@ main {
 
 
 
-/* ===================================
-   Mobile
-=================================== */
+
+
+/* =========================================
+   MOBILE
+========================================= */
 
 
 @media(max-width:700px) {
+
 
 
     .visitor-box {
@@ -451,9 +507,10 @@ main {
     }
 
 
+
     .fallen-logo {
 
-        font-size:26px;
+        font-size:38px;
 
     }
 
