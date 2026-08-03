@@ -1,9 +1,12 @@
 /* ========================================= */
 /* FallenAngels Version 2.0                  */
-/* Teil 1 - Grunddesign                      */
+/* Teil 1                                   */
 /* ========================================= */
 
-/* ---------- Grundeinstellungen ---------- */
+
+/* ========================================= */
+/* Grundeinstellungen                        */
+/* ========================================= */
 
 *{
     margin:0;
@@ -12,214 +15,115 @@
 }
 
 body{
+
     background:#000;
-    color:#d6d6d6;
-    font-family:Georgia, serif;
+
+    color:#d8d8d8;
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:22px;
+
+    line-height:1.6;
+
 }
 
-/* ---------- Startseite ---------- */
+main{
+
+    width:100%;
+
+}
+
+
+/* ========================================= */
+/* Startseite                                */
+/* ========================================= */
 
 .homepage-container{
+
     position:relative;
+
     width:100%;
+
     max-width:1600px;
-    margin:auto;
+
+    margin:0 auto;
+
 }
 
 .homepage{
+
     width:100%;
+
     display:block;
+
 }
 
-/* ---------- Klickbereiche ---------- */
+
+/* ========================================= */
+/* Klickbereiche                             */
+/* ========================================= */
 
 .link{
+
     position:absolute;
+
     display:block;
+
     transition:.3s;
+
 }
 
 .link:hover{
-    background:rgba(179,0,0,.15);
+
+    background:rgba(179,0,0,.12);
+
 }
 
 /* Musik */
 
 .musik{
+
     left:6.5%;
     top:54%;
     width:20%;
     height:34%;
+
 }
 
 /* Über uns */
 
 .ueberuns{
+
     left:28.5%;
     top:54%;
     width:20%;
     height:34%;
+
 }
 
 /* Galerie */
 
 .galerie{
+
     left:50.5%;
     top:54%;
     width:20%;
     height:34%;
+
 }
 
 /* Gästebuch */
 
 .gaestebuch{
+
     left:72.5%;
     top:54%;
     width:20%;
     height:34%;
-}
-
-/* ---------- Unterseiten ---------- */
-
-.seite{
-    max-width:1200px;
-    margin:40px auto;
-    padding:20px;
-    text-align:center;
-}
-
-.banner{
-    width:60%;
-    max-width:650px;
-    display:block;
-    margin:0 auto 50px;
-}
-
-h1{
-    color:#d8d8d8;
-    font-size:42px;
-    margin-bottom:20px;
-    letter-spacing:2px;
-}
-
-h2{
-    color:#b30000;
-    margin-bottom:15px;
-}
-
-h3{
-    color:#ffffff;
-    margin:15px 0;
-}
-
-.text{
-    color:#c0c0c0;
-    font-size:22px;
-    line-height:1.6;
-    margin-bottom:50px;
-}
-
-/* ========================================= */
-/* Musik                                    */
-/* ========================================= */
-
-.song-grid{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:flex-start;
-
-    gap:35px;
-
-    flex-wrap:wrap;
 
 }
 
-/* ---------- Karten ---------- */
-
-.karte{
-
-    width:320px;
-
-    background:#151515;
-
-    border:1px solid #5a5a5a;
-
-    border-radius:12px;
-
-    padding:25px;
-
-    transition:.3s;
-
-    box-shadow:0 0 15px rgba(0,0,0,.6);
-
-}
-
-.karte:hover{
-
-    border-color:#8b0000;
-
-    transform:translateY(-5px);
-
-    box-shadow:0 0 25px rgba(139,0,0,.4);
-
-}
-
-.cover{
-
-    width:200px;
-
-    height:200px;
-
-    object-fit:cover;
-
-    display:block;
-
-    margin:0 auto 20px;
-
-    border-radius:10px;
-
-    border:1px solid #444;
-
-}
-
-.karte p{
-
-    color:#c5c5c5;
-
-    line-height:1.6;
-
-}
-
-/* ---------- Buttons ---------- */
-
-.button{
-
-    display:inline-block;
-
-    margin-top:35px;
-
-    padding:14px 30px;
-
-    border:1px solid #8b0000;
-
-    color:#ffffff;
-
-    text-decoration:none;
-
-    transition:.3s;
-
-    border-radius:6px;
-
-}
-
-.button:hover{
-
-    background:#8b0000;
-
-}
 
 /* ========================================= */
 /* Besucherbereich                           */
@@ -227,64 +131,133 @@ h3{
 
 .visitor-box{
 
-    width:520px;
+    max-width:540px;
 
-    max-width:90%;
+    margin:70px auto;
 
-    margin:60px auto;
-
-    padding:30px;
+    padding:35px;
 
     text-align:center;
 
-    background:#111;
+    background:linear-gradient(180deg,#171717,#090909);
 
-    border:2px solid #660000;
+    border:2px solid #690000;
 
-    border-radius:12px;
+    border-radius:16px;
 
-    box-shadow:0 0 25px rgba(139,0,0,.35);
+    box-shadow:
+        0 0 30px rgba(120,0,0,.35),
+        inset 0 0 20px rgba(255,255,255,.03);
+
+}
+
+.visitor-logo{
+
+    width:70px;
+
+    display:block;
+
+    margin:0 auto 20px;
+
+    filter:drop-shadow(0 0 8px rgba(179,0,0,.4));
 
 }
 
 .visitor-title{
 
-    color:#d8d8d8;
+    font-family:"Cinzel", serif;
 
-    font-size:28px;
+    color:#e2e2e2;
 
-    margin-bottom:20px;
+    font-size:30px;
+
+    letter-spacing:2px;
+
+    margin-bottom:25px;
+
+}
+
+.visitor-frame{
+
+    display:inline-block;
+
+    padding:10px;
+
+    border:2px solid #6d0000;
+
+    border-radius:10px;
+
+    background:#111;
+
+    box-shadow:
+        inset 0 0 10px rgba(255,255,255,.04),
+        0 0 15px rgba(179,0,0,.25);
 
 }
 
 .visitor-number{
 
-    display:inline-block;
+    min-width:220px;
 
-    padding:15px 35px;
+    padding:15px 30px;
 
     background:#050505;
 
-    border:1px solid #555;
+    border:1px solid #666;
 
     border-radius:8px;
 
-    font-size:34px;
+    color:#f5f5f5;
 
-    letter-spacing:6px;
+    font-size:36px;
 
     font-family:"Courier New", monospace;
 
-    color:#ffffff;
+    letter-spacing:7px;
 
 }
 
 .visitor-text{
 
-    margin-top:20px;
+    margin-top:22px;
 
-    color:#aaaaaa;
+    color:#bcbcbc;
 
     font-style:italic;
+
+}
+
+
+/* ========================================= */
+/* Footer                                    */
+/* ========================================= */
+
+.fallen-footer{
+
+    text-align:center;
+
+    margin:50px 0 30px;
+
+}
+
+.footer-line{
+
+    width:220px;
+
+    height:1px;
+
+    background:#5d0000;
+
+    margin:15px auto;
+
+}
+
+.footer-name{
+
+    color:#888;
+
+    font-size:18px;
+
+    letter-spacing:2px;
 
 }
