@@ -1,8 +1,12 @@
 /* =========================================
    FALLENANGELS
-   Gothic Monument Edition
+   Gothic Homepage CSS
 ========================================= */
 
+
+/* =========================================
+   BASIS
+========================================= */
 
 * {
     margin:0;
@@ -14,14 +18,17 @@
 html,
 body {
 
-    background:#020202;
+    background:#030303;
 
-    color:#c5c5c5;
+    color:#c0c0c0;
 
     font-family:'Cormorant Garamond', serif;
 
-}
+    width:100%;
 
+    min-height:100%;
+
+}
 
 
 main {
@@ -33,7 +40,7 @@ main {
 
 
 /* =========================================
-   HOMEPAGE
+   STARTBILD
 ========================================= */
 
 
@@ -45,14 +52,17 @@ main {
 
     max-width:1200px;
 
-    margin:auto;
+    margin:0 auto;
 
 }
+
 
 
 .homepage {
 
     width:100%;
+
+    height:auto;
 
     display:block;
 
@@ -63,7 +73,7 @@ main {
 
 
 /* =========================================
-   UNSICHTBARE LINKS
+   UNSICHTBARE MENÜPUNKTE
 ========================================= */
 
 
@@ -73,80 +83,96 @@ main {
 
     display:block;
 
+    z-index:50;
+
 }
 
 
+
+/* Musik */
 
 .musik {
 
-    top:20%;
+    top:18%;
 
-    left:12%;
+    left:10%;
 
-    width:22%;
+    width:25%;
 
     height:25%;
 
 }
 
+
+
+/* Über uns */
 
 .ueberuns {
 
-    top:20%;
+    top:18%;
 
-    right:12%;
+    right:10%;
 
-    width:22%;
+    width:25%;
 
     height:25%;
 
 }
 
+
+
+/* Galerie */
 
 .galerie {
 
-    bottom:20%;
+    bottom:18%;
 
-    left:12%;
+    left:10%;
 
-    width:22%;
+    width:25%;
 
     height:25%;
 
 }
 
+
+
+/* Gästebuch */
 
 .gaestebuch {
 
-    bottom:20%;
+    bottom:18%;
 
-    right:12%;
+    right:10%;
 
-    width:22%;
+    width:25%;
 
     height:25%;
 
 }
+
+
 
 
 
 
 
 /* =========================================
-   BESUCHER-GRABSTEIN
+   BESUCHERGRABSTEIN
 ========================================= */
 
 
 .visitor-box {
 
 
-    width:210px;
+    width:230px;
 
 
-    margin:70px auto;
+    margin:55px auto;
 
 
-    padding:45px 20px 35px;
+    padding:35px 20px;
+
 
 
     text-align:center;
@@ -158,14 +184,13 @@ main {
 
     background:
 
-
     linear-gradient(
 
         160deg,
 
-        #292929,
+        #222,
 
-        #090909
+        #070707
 
     );
 
@@ -177,29 +202,25 @@ main {
 
     border-radius:
 
-    110px 110px 8px 8px;
+    120px 120px 12px 12px;
 
 
 
     box-shadow:
 
 
-    inset 0 0 45px #000,
+    inset 0 0 35px #000,
 
 
-    0 20px 45px rgba(0,0,0,.9),
+    0 20px 40px rgba(0,0,0,.9),
 
 
-    0 0 35px rgba(120,0,0,.45);
+    0 0 25px rgba(120,0,0,.45);
 
 
 
 }
 
-
-
-
-/* Stein-Innenrahmen */
 
 
 .visitor-box::before {
@@ -217,23 +238,24 @@ main {
 
     border-radius:
 
-    100px 100px 5px 5px;
+    110px 110px 8px 8px;
 
 
 
-    border:1px solid rgba(200,200,200,.18);
+    border:1px solid rgba(220,220,220,.15);
 
 
 }
 
 
 
-
-
 .visitor-symbol {
 
 
-    color:#990000;
+    position:relative;
+
+
+    color:#900;
 
 
     font-size:24px;
@@ -248,9 +270,10 @@ main {
 
 
 
-
-
 .visitor-box h2 {
+
+
+    position:relative;
 
 
     margin:15px 0;
@@ -260,61 +283,48 @@ main {
     font-family:'Cinzel',serif;
 
 
-
-    font-size:12px;
-
+    font-size:13px;
 
 
-    letter-spacing:3px;
-
-
-
-    line-height:1.7;
-
+    letter-spacing:2px;
 
 
     text-transform:uppercase;
 
 
-
-    color:#cfcfcf;
-
+    color:#bbb;
 
 
 }
-
-
 
 
 
 .visitor-number {
 
 
+    position:relative;
+
+
     font-family:'Cinzel',serif;
 
 
-    font-size:34px;
+    font-size:38px;
 
 
     letter-spacing:7px;
 
 
-
-    color:#d8d8d8;
+    color:#ddd;
 
 
 
     text-shadow:
 
 
-
-    2px 3px 3px #000,
-
-
-    0 0 15px rgba(255,255,255,.3),
+    2px 2px 3px #000,
 
 
-    0 0 25px rgba(139,0,0,.6);
+    0 0 15px rgba(139,0,0,.6);
 
 
 
@@ -322,21 +332,19 @@ main {
 
 
 
-
-
 .visitor-box p {
 
 
-    margin-top:15px;
+    position:relative;
 
 
-    font-size:13px;
-
-
-    line-height:1.5;
+    margin-top:12px;
 
 
     color:#888;
+
+
+    font-size:13px;
 
 
     font-style:italic;
@@ -349,8 +357,10 @@ main {
 
 
 
+
+
 /* =========================================
-   FALLENANGELS GOTHIC SIEGEL
+   FALLENANGELS LOGO
 ========================================= */
 
 
@@ -360,24 +370,23 @@ main {
     text-align:center;
 
 
-    padding:70px 0 40px;
+    padding:60px 0 40px;
 
 
 }
 
 
 
-
 .footer-line {
 
 
-    width:180px;
+    width:160px;
 
 
     height:1px;
 
 
-    margin:25px auto;
+    margin:20px auto;
 
 
 
@@ -401,7 +410,6 @@ main {
 
 
 
-
 .fallen-logo {
 
 
@@ -414,7 +422,8 @@ main {
     align-items:center;
 
 
-    gap:22px;
+
+    gap:18px;
 
 
 
@@ -422,34 +431,32 @@ main {
 
 
 
-    font-size:85px;
+    font-size:75px;
 
 
 
-    letter-spacing:15px;
+    letter-spacing:12px;
 
 
 
-    color:#dedede;
+    color:#ddd;
 
 
 
     text-shadow:
 
 
-
     0 3px 5px #000,
 
 
-    0 0 15px #aaa,
+    0 0 20px rgba(255,255,255,.25),
 
 
-    0 0 40px rgba(139,0,0,.8);
+    0 0 35px rgba(139,0,0,.7);
 
 
 
 }
-
 
 
 
@@ -457,39 +464,29 @@ main {
 .fallen-logo span {
 
 
-    color:#8b0000;
+    color:#900;
 
 
-    font-size:42px;
-
-
-
-    text-shadow:
-
-
-    0 0 20px #900;
-
+    font-size:35px;
 
 
 }
 
 
 
-
-
 .footer-name {
 
 
-    margin-top:18px;
+    margin-top:15px;
 
 
     font-family:'Cinzel',serif;
 
 
-    font-size:22px;
+    font-size:20px;
 
 
-    letter-spacing:10px;
+    letter-spacing:8px;
 
 
     color:#aaa;
@@ -502,12 +499,10 @@ main {
 
 
 
-
-
 .fallen-footer p {
 
 
-    margin-top:25px;
+    margin-top:20px;
 
 
     color:#555;
@@ -534,10 +529,9 @@ main {
 
     .visitor-box {
 
-        width:80%;
+        width:85%;
 
     }
-
 
 
     .fallen-logo {
