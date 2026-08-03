@@ -1,15 +1,17 @@
 /* =========================================
    FALLENANGELS
-   Gothic Edition
+   Gothic Darkwave Design
 ========================================= */
 
 
-
+/* =========================================
+   BASIS
+========================================= */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 
@@ -17,9 +19,10 @@ html,
 body {
 
     width:100%;
+
     min-height:100%;
 
-    background:#030303;
+    background:#020202;
 
     color:#c0c0c0;
 
@@ -28,12 +31,13 @@ body {
 }
 
 
-
 main {
 
     width:100%;
 
 }
+
+
 
 
 
@@ -55,6 +59,7 @@ main {
 }
 
 
+
 .homepage {
 
     width:100%;
@@ -67,8 +72,10 @@ main {
 
 
 
+
+
 /* =========================================
-   UNSICHTBARE BUTTONS
+   UNSICHTBARE NAVIGATION
 ========================================= */
 
 
@@ -78,59 +85,61 @@ main {
 
     display:block;
 
-    z-index:5;
+    z-index:10;
 
 }
 
 
-/* Positionen nach Bedarf ändern */
 
 .musik {
 
     top:20%;
 
-    left:10%;
+    left:12%;
 
-    width:25%;
+    width:22%;
 
     height:25%;
 
 }
+
 
 
 .ueberuns {
 
     top:20%;
 
-    right:10%;
+    right:12%;
 
-    width:25%;
+    width:22%;
 
     height:25%;
 
 }
+
 
 
 .galerie {
 
     bottom:20%;
 
-    left:10%;
+    left:12%;
 
-    width:25%;
+    width:22%;
 
     height:25%;
 
 }
+
 
 
 .gaestebuch {
 
     bottom:20%;
 
-    right:10%;
+    right:12%;
 
-    width:25%;
+    width:22%;
 
     height:25%;
 
@@ -140,22 +149,24 @@ main {
 
 
 
+
+
 /* =========================================
-   BESUCHER DER VERLORENEN SEELEN
-   Gothic Steinplatte
+   BESUCHERZÄHLER
+   Gothic Grabstein
 ========================================= */
 
 
 .visitor-box {
 
 
-    width:240px;
+    width:260px;
 
 
-    margin:45px auto;
+    margin:60px auto;
 
 
-    padding:25px 18px;
+    padding:40px 20px 35px;
 
 
     text-align:center;
@@ -170,27 +181,37 @@ main {
 
     linear-gradient(
 
-        135deg,
+        180deg,
 
-        #1a1a1a,
+        #252525,
 
-        #080808
+        #070707
 
     );
 
 
 
-    border:1px solid #555;
+    border:3px solid #444;
+
+
+
+    border-radius:
+
+
+    130px 130px 15px 15px;
 
 
 
     box-shadow:
 
 
-    inset 0 0 25px #000,
+    inset 0 0 45px #000,
 
 
-    0 0 20px rgba(100,0,0,.4);
+    0 20px 45px #000,
+
+
+    0 0 35px rgba(120,0,0,.45);
 
 
 
@@ -199,7 +220,7 @@ main {
 
 
 
-/* innerer alter Rahmen */
+/* innere Steinlinie */
 
 
 .visitor-box::before {
@@ -211,39 +232,48 @@ main {
     position:absolute;
 
 
-    inset:7px;
+    inset:12px;
 
 
-    border:1px solid rgba(192,192,192,.18);
+
+    border-radius:
+
+
+    120px 120px 10px 10px;
+
+
+
+    border:1px solid rgba(220,220,220,.18);
 
 
 }
 
 
 
-/* Ornament */
 
 
 .visitor-symbol {
 
 
-    color:#8b0000;
+    position:relative;
 
 
-    font-size:20px;
+    color:#900000;
+
+
+    font-size:28px;
 
 
     text-shadow:
 
-    0 0 10px #700;
+
+    0 0 15px #900;
 
 
 }
 
 
 
-
-/* Überschrift */
 
 
 .visitor-box h2 {
@@ -252,22 +282,27 @@ main {
     position:relative;
 
 
-    margin:12px 0;
+    margin:15px 0;
+
 
 
     font-family:'Cinzel',serif;
 
 
-    font-size:13px;
+
+    font-size:14px;
 
 
-    letter-spacing:2px;
+
+    letter-spacing:3px;
+
 
 
     text-transform:uppercase;
 
 
-    color:#c5c5c5;
+
+    color:#bbbbbb;
 
 
 }
@@ -275,8 +310,6 @@ main {
 
 
 
-
-/* Besucherzahl */
 
 
 .visitor-number {
@@ -288,30 +321,35 @@ main {
     font-family:'Cinzel',serif;
 
 
-    font-size:36px;
+
+    font-size:42px;
 
 
-    letter-spacing:6px;
+
+    letter-spacing:8px;
 
 
-    color:#d8d8d8;
+
+    color:#dddddd;
 
 
 
     text-shadow:
 
 
-    2px 2px 4px #000,
+
+    2px 3px 4px #000,
 
 
-    0 0 15px rgba(255,255,255,.25),
+    0 0 20px rgba(255,255,255,.25),
 
 
-    0 0 20px rgba(139,0,0,.5);
-
+    0 0 30px rgba(139,0,0,.6);
 
 
 }
+
+
 
 
 
@@ -322,13 +360,16 @@ main {
     position:relative;
 
 
-    margin-top:12px;
+    margin-top:15px;
 
 
-    color:#888;
+
+    color:#777;
+
 
 
     font-size:14px;
+
 
 
     font-style:italic;
@@ -341,8 +382,9 @@ main {
 
 
 
+
 /* =========================================
-   FALLENANGELS GOTHIC SIGNET
+   FALLENANGELS SIGNET
 ========================================= */
 
 
@@ -363,13 +405,15 @@ main {
 .footer-line {
 
 
-    width:170px;
+    width:180px;
 
 
     height:1px;
 
 
-    margin:20px auto;
+
+    margin:25px auto;
+
 
 
     background:
@@ -394,46 +438,54 @@ main {
 
 
 
+
 .fallen-logo {
 
 
     display:flex;
 
 
+
     justify-content:center;
+
 
 
     align-items:center;
 
 
-    gap:18px;
+
+    gap:25px;
 
 
 
     font-family:'Cinzel',serif;
 
 
-    font-size:65px;
 
-
-    letter-spacing:12px;
+    font-size:90px;
 
 
 
-    color:#d0d0d0;
+    letter-spacing:18px;
+
+
+
+    color:#e0e0e0;
+
 
 
 
     text-shadow:
 
 
-    0 3px 5px #000,
+
+    0 5px 5px #000,
 
 
-    0 0 15px rgba(255,255,255,.25),
+    0 0 15px #aaa,
 
 
-    0 0 40px rgba(139,0,0,.6);
+    0 0 45px rgba(139,0,0,.8);
 
 
 
@@ -441,25 +493,30 @@ main {
 
 
 
-/* Gothic Kreuze */
+
 
 
 .fallen-logo span {
 
 
-    color:#8b0000;
+    color:#900000;
 
 
-    font-size:34px;
+    font-size:45px;
+
 
 
     text-shadow:
 
 
-    0 0 15px rgba(139,0,0,.8);
+
+    0 0 20px #900;
+
 
 
 }
+
+
 
 
 
@@ -471,16 +528,21 @@ main {
     margin-top:15px;
 
 
+
     font-family:'Cinzel',serif;
 
 
-    font-size:18px;
+
+    font-size:24px;
 
 
-    letter-spacing:7px;
+
+    letter-spacing:12px;
 
 
-    color:#999;
+
+    color:#aaaaaa;
+
 
 
     text-transform:uppercase;
@@ -492,16 +554,17 @@ main {
 
 
 
+
 .fallen-footer p {
 
 
     margin-top:25px;
 
 
-    color:#555;
-
-
     font-size:12px;
+
+
+    color:#555;
 
 
 }
@@ -512,8 +575,9 @@ main {
 
 
 
+
 /* =========================================
-   Handy Ansicht
+   MOBILE
 ========================================= */
 
 
@@ -530,9 +594,17 @@ main {
 
     .fallen-logo {
 
-        font-size:42px;
+        font-size:45px;
 
-        letter-spacing:6px;
+        letter-spacing:8px;
+
+    }
+
+
+
+    .footer-name {
+
+        font-size:16px;
 
     }
 
