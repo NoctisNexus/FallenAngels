@@ -99,19 +99,18 @@ body{
 }
 
 .fa-logo{
-    width:110px;
+    width:190px;
     height:auto;
     display:block;
-    margin:0 auto 20px;
+    margin:0 auto 25px;
 }
 
 .grave{
-    width:380px;
+    width:500px;
     height:auto;
     display:block;
     margin:0 auto;
 }
-
 .grave-container{
     position:relative;
     display:inline-block;
