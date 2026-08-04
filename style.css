@@ -89,3 +89,41 @@ body{
 .link:hover{
     background:rgba(255,0,0,.15);
 }
+/* ========================= */
+/* Besucherbereich */
+/* ========================= */
+
+.visitor-area{
+    text-align:center;
+    margin:40px auto 60px;
+}
+
+.fa-logo{
+    width:90px;      /* vorher größer */
+    height:auto;
+    display:block;
+    margin:0 auto 15px;
+}
+
+.grave{
+    width:320px;     /* vorher größer */
+    height:auto;
+    display:block;
+    margin:0 auto;
+}
+
+.grave-container{
+    position:relative;
+    display:inline-block;
+}
+
+.visitor-number{
+    position:absolute;
+    top:46%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-family:"Courier New", monospace;
+    font-size:28px;
+    letter-spacing:4px;
+    color:#f2f2f2;
+}
