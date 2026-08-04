@@ -1,402 +1,91 @@
-/* =========================================
-   FALLENANGELS
-   Gothic Image Edition
-========================================= */
+/* ========================================= */
+/* FallenAngels - Style.css                  */
+/* ========================================= */
 
 
-/* Grundlayout */
+/* ========================= */
+/* Grundeinstellungen */
+/* ========================= */
 
-* {
+*{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
-
-html,
-body {
-
-    width:100%;
-    min-height:100%;
-
-    background:#030303;
-
-    color:#c0c0c0;
-
-    font-family:'Cormorant Garamond', serif;
-
+body{
+    background:#000;
+    color:#ddd;
+    font-family:Georgia, serif;
 }
 
 
-main {
+/* ========================= */
+/* Startseite */
+/* ========================= */
 
-    width:100%;
-
-}
-
-
-
-/* =========================================
-   HOMEPAGE
-========================================= */
-
-
-.homepage-container {
-
+.homepage-container{
     position:relative;
-
     width:100%;
-
-    max-width:1200px;
-
-    margin:0 auto;
-
+    max-width:1600px;
+    margin:auto;
 }
 
-
-
-.homepage {
-
+.homepage{
     width:100%;
-
-    height:auto;
-
     display:block;
-
 }
 
 
+/* ========================= */
+/* Klickbereiche */
+/* ========================= */
 
-
-
-/* =========================================
-   UNSICHTBARE KLICKFELDER
-========================================= */
-
-
-.link {
-
+.link{
     position:absolute;
-
     display:block;
+    transition:.25s;
+}
 
-    z-index:10;
+/* Musik */
 
-    transition:.3s ease;
+.musik{
+    left:6.5%;
+    top:54%;
+    width:20%;
+    height:34%;
+}
 
+/* Über uns */
+
+.ueberuns{
+    left:28.5%;
+    top:54%;
+    width:20%;
+    height:34%;
+}
+
+/* Galerie */
+
+.galerie{
+    left:50.5%;
+    top:54%;
+    width:20%;
+    height:34%;
+}
+
+/* Gästebuch */
+
+.gaestebuch{
+    left:72.5%;
+    top:54%;
+    width:20%;
+    height:34%;
 }
 
 
+/* Hover-Effekt wie früher */
 
-.link:hover {
-
-    filter:drop-shadow(0 0 12px rgba(139,0,0,.8));
-
-}
-
-
-
-
-
-.musik {
-
-    top:20%;
-
-    left:10%;
-
-    width:25%;
-
-    height:25%;
-
-}
-
-
-
-.ueberuns {
-
-    top:20%;
-
-    right:10%;
-
-    width:25%;
-
-    height:25%;
-
-}
-
-
-
-.galerie {
-
-    bottom:20%;
-
-    left:10%;
-
-    width:25%;
-
-    height:25%;
-
-}
-
-
-
-.gaestebuch {
-
-    bottom:20%;
-
-    right:10%;
-
-    width:25%;
-
-    height:25%;
-
-}
-
-
-
-
-
-
-
-/* =========================================
-   BESUCHERBEREICH
-========================================= */
-
-
-.visitor-area {
-
-    width:100%;
-
-    text-align:center;
-
-    margin-top:60px;
-
-}
-
-
-
-
-
-
-
-/* =========================================
-   FA LOGO
-========================================= */
-
-
-.fa-logo {
-
-    width:180px;
-
-    max-width:50%;
-
-    height:auto;
-
-
-
-    display:block;
-
-
-
-    margin:0 auto 35px;
-
-
-
-    filter:
-
-
-    drop-shadow(0 0 12px rgba(255,255,255,.25))
-
-
-    drop-shadow(0 0 25px rgba(139,0,0,.65));
-
-
-
-}
-
-
-
-
-
-
-
-/* =========================================
-   GRABSTEIN
-========================================= */
-
-
-.grave-container {
-
-    position:relative;
-
-
-    width:360px;
-
-
-    margin:0 auto;
-
-
-
-}
-
-
-
-
-
-.grave {
-
-
-    width:100%;
-
-
-    height:auto;
-
-
-    display:block;
-
-
-
-    filter:
-
-
-    drop-shadow(0 25px 35px #000)
-
-
-    drop-shadow(0 0 25px rgba(139,0,0,.55));
-
-
-
-}
-
-
-
-
-
-
-
-/* =========================================
-   BESUCHERZAHL
-========================================= */
-
-
-.visitor-number {
-
-
-    position:absolute;
-
-
-
-    top:48%;
-
-
-
-    left:50%;
-
-
-
-    transform:translate(-50%,-50%);
-
-
-
-    font-family:'Cinzel',serif;
-
-
-
-    font-size:42px;
-
-
-
-    letter-spacing:8px;
-
-
-
-    color:#dddddd;
-
-
-
-    text-shadow:
-
-
-    2px 3px 6px #000,
-
-
-    0 0 18px rgba(255,255,255,.35),
-
-
-    0 0 30px rgba(139,0,0,.75);
-
-
-
-}
-
-
-
-
-
-
-
-/* =========================================
-   FOOTER
-========================================= */
-
-
-footer {
-
-
-    text-align:center;
-
-
-    margin-top:60px;
-
-
-    padding-bottom:35px;
-
-
-
-    color:#555;
-
-
-    font-size:12px;
-
-
-}
-
-
-
-
-
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-
-@media(max-width:700px){
-
-
-
-    .fa-logo {
-
-        width:130px;
-
-    }
-
-
-
-    .grave-container {
-
-        width:280px;
-
-    }
-
-
-
-    .visitor-number {
-
-        font-size:30px;
-
-    }
-
-
+.link:hover{
+    background:rgba(255,0,0,.15);
 }
