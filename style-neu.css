@@ -147,32 +147,32 @@ a{
 .visitor-area{
 
     width:100%;
-
     text-align:center;
-
     margin:45px auto 60px;
 
 }
 
 .fa-logo{
 
-    width:140px;
-
-    margin:0 auto 20px;
+    width:160px;
+    height:auto;
+    display:block;
+    margin:0 auto 25px;
 
 }
 
 .grave-container{
 
     position:relative;
-
     display:inline-block;
 
 }
 
 .grave{
 
-    width:400px;
+    width:440px;
+    height:auto;
+    display:block;
 
 }
 
@@ -187,17 +187,15 @@ a{
 
     color:#f3f3f3;
 
-    font-size:30px;
-
     font-family:"Courier New", monospace;
-
+    font-size:30px;
+    font-weight:bold;
     letter-spacing:6px;
 
     text-shadow:
         0 0 8px rgba(255,255,255,.25);
 
 }
-
 /* ===========================
    Footer
 =========================== */
