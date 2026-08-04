@@ -99,14 +99,14 @@ body{
 }
 
 .fa-logo{
-    width:90px;      /* vorher größer */
+    width:110px;
     height:auto;
     display:block;
-    margin:0 auto 15px;
+    margin:0 auto 20px;
 }
 
 .grave{
-    width:320px;     /* vorher größer */
+    width:380px;
     height:auto;
     display:block;
     margin:0 auto;
