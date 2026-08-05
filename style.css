@@ -362,7 +362,7 @@ h1{
         0 0 15px rgba(0,0,0,.6);
 
     transition:.35s;
-
+    cursor:pointer;
 }
 
 .karte:hover .cover{
@@ -371,7 +371,7 @@ h1{
 
     box-shadow:
         0 0 25px rgba(139,0,0,.45);
-
+    transform:scale(1.03);
 }
 
 
