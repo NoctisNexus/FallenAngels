@@ -294,18 +294,12 @@ h1{
 .song-grid{
 
     display:flex;
-
     justify-content:center;
-
     align-items:flex-start;
-
     gap:40px;
-}
-
     flex-wrap:wrap;
 
 }
-
 
 /* Albumkarte */
 
@@ -403,20 +397,13 @@ h1{
 .karte h3::after{
 
     content:"";
-
     display:block;
-
-     width:140px;
+    width:140px;
     height:2px;
-
     background:#8b0000;
-
-}
-
     margin:14px auto 20px;
 
 }
-
 
 /* Beschreibung */
 
@@ -443,26 +430,18 @@ h1{
 
 .button{
 
- .button{
-
     display:inline-block;
-
     margin-top:70px;
-
     padding:15px 35px;
 
-    color:white;
-
+    color:#fff;
     text-decoration:none;
 
     border:1px solid #8b0000;
-
     border-radius:6px;
 
     font-family:"Cinzel", serif;
-
     font-size:18px;
-
     letter-spacing:1px;
 
     transition:.35s;
