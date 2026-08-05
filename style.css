@@ -164,51 +164,117 @@ h1{
     line-height:1.6;
 }
 
-/* Albumkarten */
+/* ========================================= */
+/* Albumkarten                               */
+/* ========================================= */
 
 .song-grid{
     display:flex;
     justify-content:center;
-    gap:35px;
+    align-items:flex-start;
+    gap:60px;
     flex-wrap:wrap;
+    margin-top:40px;
 }
 
 .karte{
-    width:360px;
-    background:#161616;
-    border:1px solid #444;
-    border-radius:12px;
-    padding:25px;
-    transition:.3s;
-    box-shadow:0 0 18px rgba(0,0,0,.55);
+
+    width:420px;
+
+    padding:20px;
+
+    background:linear-gradient(
+        180deg,
+        #1a1a1a 0%,
+        #101010 100%
+    );
+
+    border:1px solid #3b3b3b;
+    border-radius:14px;
+
+    box-shadow:
+        0 0 18px rgba(0,0,0,.65);
+
+    transition:.35s;
+
 }
+
 .karte:hover{
+
     transform:translateY(-8px);
+
     border-color:#8b0000;
-    box-shadow:0 0 22px rgba(139,0,0,.4);
+
+    box-shadow:
+        0 0 25px rgba(139,0,0,.35);
+
 }
+
+
+/* Albumcover */
 
 .cover{
-    width:300px;
-    height:auto;
+
+    width:100%;
+    max-width:380px;
+
     display:block;
-    margin:0 auto 20px;
-    border-radius:8px;
-    transition:.3s;
+
+    margin:0 auto 25px;
+
+    border-radius:10px;
+
+    border:2px solid #444;
+
+    transition:.35s;
+
+    box-shadow:
+        0 0 15px rgba(0,0,0,.6);
+
 }
+
+.karte:hover .cover{
+
+    border-color:#8b0000;
+
+    box-shadow:
+        0 0 25px rgba(139,0,0,.45);
+
+}
+
+
+/* Albumtitel */
+
 .karte h3{
-    color:#f0f0f0;
-    margin-bottom:15px;
+
+    font-family:"Cinzel", serif;
+
+    color:#eeeeee;
+
+    font-size:28px;
+
+    margin-bottom:18px;
+
+    letter-spacing:1px;
+
 }
+
+
+/* Beschreibung */
 
 .karte p{
-    color:#dcdcdc;
-    font-size:20px;
-    font-style:italic;
-    line-height:1.7;
-    margin-top:10px;
-}
 
+    color:#d9d9d9;
+
+    font-size:19px;
+
+    font-style:italic;
+
+    line-height:1.7;
+
+    margin-bottom:10px;
+
+}
 /* Button */
 
 .button{
