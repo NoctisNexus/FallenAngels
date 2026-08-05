@@ -1,11 +1,11 @@
 /* ========================================= */
-/* FallenAngels - Style.css                  */
+/* FallenAngels - style.css                  */
 /* ========================================= */
 
 
-/* ========================= */
-/* Grundeinstellungen */
-/* ========================= */
+/* ========================================= */
+/* Grundeinstellungen                        */
+/* ========================================= */
 
 *{
     margin:0;
@@ -13,122 +13,211 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
+
     background:#000;
     color:#ddd;
+
     font-family:Georgia, serif;
+
+    line-height:1.6;
+
 }
 
 
-/* ========================= */
-/* Startseite */
-/* ========================= */
+/* ========================================= */
+/* Startseite                                */
+/* ========================================= */
 
 .homepage-container{
+
     position:relative;
+
     width:100%;
     max-width:1600px;
-    margin:auto;
+
+    margin:0 auto;
+
 }
 
 .homepage{
-    width:100%;
+
     display:block;
+
+    width:100%;
+    height:auto;
+
 }
 
 
-/* ========================= */
-/* Klickbereiche */
-/* ========================= */
+/* ========================================= */
+/* Klickbereiche                             */
+/* ========================================= */
 
 .link{
+
     position:absolute;
     display:block;
-    transition:.25s;
+
+    transition:
+        background .30s,
+        box-shadow .30s,
+        transform .25s;
+
 }
 
 /* Musik */
 
 .musik{
+
     left:6.5%;
     top:54%;
+
     width:20%;
     height:34%;
+
 }
 
 /* Über uns */
 
 .ueberuns{
+
     left:28.5%;
     top:54%;
+
     width:20%;
     height:34%;
+
 }
 
 /* Galerie */
 
 .galerie{
+
     left:50.5%;
     top:54%;
+
     width:20%;
     height:34%;
+
 }
 
 /* Gästebuch */
 
 .gaestebuch{
+
     left:72.5%;
     top:54%;
+
     width:20%;
     height:34%;
+
 }
 
 
-/* Hover-Effekt wie früher */
+/* Hover */
 
 .link:hover{
-    background:rgba(255,0,0,.15);
+
+    background:rgba(139,0,0,.16);
+
+    box-shadow:
+        inset 0 0 20px rgba(139,0,0,.35),
+        0 0 20px rgba(139,0,0,.18);
+
 }
-/* ========================= */
-/* Besucherbereich */
-/* ========================= */
+
+
+/* ========================================= */
+/* Besucherbereich                           */
+/* ========================================= */
 
 .visitor-area{
+
     text-align:center;
-    margin:40px auto 60px;
+
+    margin:55px auto 70px;
+
 }
 
-/* ===========================
-   Besucherbereich
-=========================== */
+
+/* Logo */
 
 .fa-logo{
+
+    display:block;
+
     width:175px;
     height:auto;
-    display:block;
-    margin:0 auto 25px;
+
+    margin:0 auto 30px;
+
+}
+
+
+/* Grabstein */
+
+.grave-container{
+
+    position:relative;
+
+    display:inline-block;
+
 }
 
 .grave{
+
+    display:block;
+
     width:470px;
     height:auto;
-    display:block;
-    margin:0 auto;
-}
-.grave-container{
-    position:relative;
-    display:inline-block;
+
 }
 
+
+/* Besucherzahl */
+
 .visitor-number{
+
     position:absolute;
+
     top:46%;
     left:50%;
+
     transform:translate(-50%,-50%);
+
     font-family:"Courier New", monospace;
+
     font-size:28px;
+
     letter-spacing:4px;
+
     color:#f2f2f2;
+
+    text-shadow:
+        0 0 8px rgba(255,255,255,.15);
+
+}
+
+
+/* ========================================= */
+/* Footer                                    */
+/* ========================================= */
+
+footer{
+
+    text-align:center;
+
+    color:#777;
+
+    font-size:15px;
+
+    margin:60px 0 30px;
+
 }
 /* ========================================= */
 /* Musikseite                                */
@@ -137,48 +226,84 @@ body{
 .seite{
 
     max-width:1300px;
+
     margin:60px auto;
+
     padding:20px;
+
     text-align:center;
 
 }
 
+
+/* Banner */
+
 .banner{
+
+    display:block;
+
     width:72%;
     max-width:760px;
+
     margin:20px auto 60px;
+
 }
+
+
+/* Überschrift */
+
 h1{
 
     font-family:"Cinzel", serif;
+
     font-size:46px;
+
     color:#ececec;
+
     letter-spacing:2px;
+
     margin-bottom:20px;
 
 }
 
+
+/* Einleitung */
+
 .text{
 
     font-family:"Cormorant Garamond", serif;
+
     font-size:30px;
+
     font-style:italic;
+
     color:#d6d6d6;
 
     margin-bottom:70px;
 
 }
 
-/* Karten */
+
+/* ========================================= */
+/* Albumbereich                              */
+/* ========================================= */
 
 .song-grid{
 
     display:flex;
+
     justify-content:center;
+
+    align-items:flex-start;
+
     gap:60px;
+
     flex-wrap:wrap;
 
 }
+
+
+/* Albumkarte */
 
 .karte{
 
@@ -198,10 +323,13 @@ h1{
 
     border:1px solid #353535;
 
-    transition:.35s;
-
     box-shadow:
-        0 0 20px rgba(0,0,0,.6);
+        0 0 20px rgba(0,0,0,.60);
+
+    transition:
+        transform .35s,
+        box-shadow .35s,
+        border-color .35s;
 
 }
 
@@ -212,21 +340,28 @@ h1{
     border-color:#8b0000;
 
     box-shadow:
-        0 0 28px rgba(139,0,0,.35);
+        0 0 30px rgba(139,0,0,.35);
 
 }
 
-/* Cover */
+
+/* Albumcover */
 
 .cover{
 
+    display:block;
+
     width:100%;
-   max-width:395px;
+    max-width:395px;
+
+    margin:0 auto 28px;
+
     border-radius:10px;
 
     border:2px solid #444;
 
-    margin-bottom:25px;
+    box-shadow:
+        0 0 15px rgba(0,0,0,.6);
 
     transition:.35s;
 
@@ -237,9 +372,12 @@ h1{
     border-color:#8b0000;
 
     box-shadow:
-        0 0 22px rgba(139,0,0,.45);
+        0 0 25px rgba(139,0,0,.45);
 
 }
+
+
+/* Albumtitel */
 
 .karte h3{
 
@@ -247,28 +385,57 @@ h1{
 
     font-size:34px;
 
-    color:#efefef;
+    color:#f0f0f0;
 
     margin-bottom:18px;
 
+    letter-spacing:1px;
+
 }
+
+
+/* rote Linie */
+
+.karte h3::after{
+
+    content:"";
+
+    display:block;
+
+    width:120px;
+
+    height:1px;
+
+    background:#8b0000;
+
+    margin:14px auto 20px;
+
+}
+
+
+/* Beschreibung */
+
 .karte p{
 
     font-family:"Cormorant Garamond", serif;
 
-    font-size:24px;
+    font-size:26px;
 
     font-style:italic;
 
-    color:#e6e6e6;
+    color:#e5e5e5;
 
     line-height:1.7;
-
-    margin-top:12px;
 
     text-align:center;
 
 }
+
+
+/* ========================================= */
+/* Button                                    */
+/* ========================================= */
+
 .button{
 
     display:inline-block;
@@ -277,11 +444,13 @@ h1{
 
     padding:15px 35px;
 
+    color:#ffffff;
+
+    text-decoration:none;
+
     border:1px solid #8b0000;
 
-    color:white;
-
-    transition:.3s;
+    transition:.35s;
 
 }
 
@@ -289,41 +458,83 @@ h1{
 
     background:#8b0000;
 
-}
-
-@media(max-width:900px){
-
-    .song-grid{
-
-        flex-direction:column;
-        align-items:center;
-
-    }
-
-    .karte{
-
-        width:90%;
-        max-width:430px;
-
-    }
+    box-shadow:
+        0 0 15px rgba(139,0,0,.45);
 
 }
+/* ========================================= */
+/* Responsive Design                         */
+/* ========================================= */
 
-/* Smartphone */
+@media (max-width: 900px){
 
-@media(max-width:900px){
+    /* Startseite */
+
+    .homepage-container{
+        width:100%;
+    }
+
+    /* Besucherbereich */
+
+    .fa-logo{
+        width:140px;
+    }
+
+    .grave{
+        width:340px;
+    }
+
+    .visitor-number{
+        font-size:22px;
+        letter-spacing:3px;
+    }
+
+    /* Musikseite */
 
     .banner{
-        width:90%;
+        width:92%;
+        max-width:600px;
+    }
+
+    h1{
+        font-size:34px;
+    }
+
+    .text{
+        font-size:24px;
+        margin-bottom:50px;
     }
 
     .song-grid{
         flex-direction:column;
         align-items:center;
+        gap:40px;
     }
 
     .karte{
-        width:90%;
-        max-width:340px;
+        width:92%;
+        max-width:430px;
+        min-height:auto;
+        padding:20px;
     }
+
+    .cover{
+        width:100%;
+        max-width:100%;
+    }
+
+    .karte h3{
+        font-size:28px;
+    }
+
+    .karte p{
+        font-size:22px;
+    }
+
+    .button{
+        width:90%;
+        max-width:320px;
+        padding:16px;
+    }
+
 }
