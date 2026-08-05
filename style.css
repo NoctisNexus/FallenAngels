@@ -242,8 +242,10 @@ footer{
 
     display:block;
 
-    width:72%;
-    max-width:760px;
+   .banner{
+    width:78%;
+    max-width:820px;
+}
 
     margin:20px auto 60px;
 
@@ -296,7 +298,8 @@ h1{
 
     align-items:flex-start;
 
-    gap:60px;
+    gap:40px;
+}
 
     flex-wrap:wrap;
 
@@ -315,11 +318,11 @@ h1{
 
     border-radius:15px;
 
-    background:linear-gradient(
-        180deg,
-        #1b1b1b,
-        #111111
-    );
+   background:linear-gradient(
+    180deg,
+    #232323,
+    #141414
+);
 
     border:1px solid #353535;
 
@@ -402,11 +405,12 @@ h1{
 
     display:block;
 
-    width:120px;
-
-    height:1px;
+     width:140px;
+    height:2px;
 
     background:#8b0000;
+
+}
 
     margin:14px auto 20px;
 
@@ -438,17 +442,27 @@ h1{
 
 .button{
 
+ .button{
+
     display:inline-block;
 
     margin-top:70px;
 
     padding:15px 35px;
 
-    color:#ffffff;
+    color:white;
 
     text-decoration:none;
 
     border:1px solid #8b0000;
+
+    border-radius:6px;
+
+    font-family:"Cinzel", serif;
+
+    font-size:18px;
+
+    letter-spacing:1px;
 
     transition:.35s;
 
