@@ -98,15 +98,19 @@ body{
     margin:40px auto 60px;
 }
 
+/* ===========================
+   Besucherbereich
+=========================== */
+
 .fa-logo{
-    width:190px;
+    width:175px;
     height:auto;
     display:block;
     margin:0 auto 25px;
 }
 
 .grave{
-    width:500px;
+    width:470px;
     height:auto;
     display:block;
     margin:0 auto;
