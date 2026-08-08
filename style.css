@@ -668,3 +668,81 @@ h1{
     color:#e8e8e8;
     text-shadow:0 0 10px rgba(139,0,0,.35);
 }
+/* ========================================= */
+/* FallenAngels Radio                        */
+/* ========================================= */
+
+.radio-box{
+
+    max-width:700px;
+
+    margin:0 auto 70px;
+
+    padding:28px;
+
+    background:linear-gradient(
+        180deg,
+        #232323,
+        #141414
+    );
+
+    border:1px solid #353535;
+
+    border-radius:12px;
+
+    box-shadow:
+        0 0 20px rgba(0,0,0,.6);
+
+    text-align:center;
+
+}
+
+
+.radio-box h2{
+
+    font-family:"Cinzel", serif;
+
+    font-size:28px;
+
+    color:#eeeeee;
+
+    margin-bottom:22px;
+
+    letter-spacing:1px;
+
+}
+
+
+.radio-button{
+
+    display:inline-block;
+
+    padding:12px 30px;
+
+    color:#eeeeee;
+
+    text-decoration:none;
+
+    border:1px solid #8b0000;
+
+    border-radius:6px;
+
+    font-family:"Cinzel", serif;
+
+    font-size:17px;
+
+    letter-spacing:1px;
+
+    transition:.35s;
+
+}
+
+
+.radio-button:hover{
+
+    background:#8b0000;
+
+    box-shadow:
+        0 0 15px rgba(139,0,0,.45);
+
+}
