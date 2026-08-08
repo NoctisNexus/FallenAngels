@@ -746,3 +746,49 @@ h1{
         0 0 15px rgba(139,0,0,.45);
 
 }
+/* ========================================= */
+/* Über-uns-Seite                            */
+/* ========================================= */
+
+.ueberuns-inhalt{
+
+    max-width:850px;
+
+    margin:0 auto;
+
+    padding:35px 40px;
+
+    background:linear-gradient(
+        180deg,
+        #232323,
+        #141414
+    );
+
+    border:1px solid #353535;
+
+    border-radius:12px;
+
+    box-shadow:
+        0 0 20px rgba(0,0,0,.6);
+
+}
+
+.ueberuns-inhalt p{
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:25px;
+
+    line-height:1.8;
+
+    color:#e2e2e2;
+
+    margin-bottom:25px;
+
+}
+
+.ueberuns-inhalt p:last-child{
+
+    margin-bottom:0;
+
+}
