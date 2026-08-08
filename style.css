@@ -532,3 +532,131 @@ h1{
     }
 
 }
+/* ========================================= */
+/* Albumseite                                */
+/* ========================================= */
+
+.album-seite{
+    max-width:900px;
+    margin:0 auto;
+    text-align:center;
+}
+
+.album-seite .cover{
+    display:block;
+    width:100%;
+    max-width:600px;
+    margin:0 auto 50px;
+}
+
+
+/* ========================================= */
+/* Musik-Player                              */
+/* ========================================= */
+
+.musik-player{
+
+    max-width:700px;
+
+    margin:0 auto 35px;
+
+    padding:25px;
+
+    background:linear-gradient(
+        180deg,
+        #232323,
+        #141414
+    );
+
+    border:1px solid #353535;
+
+    border-radius:12px;
+
+    box-shadow:
+        0 0 20px rgba(0,0,0,.6);
+
+}
+
+.musik-player h2,
+.musik-link h2{
+
+    font-family:"Cinzel", serif;
+
+    font-size:25px;
+
+    color:#eeeeee;
+
+    margin-bottom:18px;
+
+}
+
+.musik-player audio{
+
+    width:100%;
+
+}
+
+
+/* ========================================= */
+/* YouTube / SoundCloud                      */
+/* ========================================= */
+
+.musik-link{
+
+    max-width:700px;
+
+    margin:0 auto 25px;
+
+    padding:22px;
+
+    background:#161616;
+
+    border:1px solid #353535;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+.musik-link:hover{
+
+    border-color:#8b0000;
+
+    box-shadow:
+        0 0 20px rgba(139,0,0,.25);
+
+}
+
+.musik-link a{
+
+    display:inline-block;
+
+    padding:10px 25px;
+
+    color:#eeeeee;
+
+    text-decoration:none;
+
+    border:1px solid #8b0000;
+
+    border-radius:6px;
+
+    font-family:"Cinzel", serif;
+
+    font-size:17px;
+
+    letter-spacing:1px;
+
+    transition:.3s;
+
+}
+
+.musik-link a:hover{
+
+    background:#8b0000;
+
+    box-shadow:
+        0 0 15px rgba(139,0,0,.45);
+
+}
