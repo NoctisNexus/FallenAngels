@@ -792,3 +792,72 @@ h1{
     margin-bottom:0;
 
 }
+/* ========================================= */
+/* Galerie                                   */
+/* ========================================= */
+
+.galerie-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2, 1fr);
+
+    gap:40px;
+
+    max-width:900px;
+
+    margin:0 auto 70px;
+
+}
+
+
+.galerie-bild{
+
+    width:100%;
+
+    height:auto;
+
+    display:block;
+
+    border:1px solid #353535;
+
+    border-radius:10px;
+
+    box-shadow:
+        0 0 20px rgba(0,0,0,.6);
+
+    transition:
+        transform .35s,
+        border-color .35s,
+        box-shadow .35s;
+
+}
+
+
+.galerie-bild:hover{
+
+    transform:scale(1.03);
+
+    border-color:#8b0000;
+
+    box-shadow:
+        0 0 25px rgba(139,0,0,.4);
+
+}
+
+
+/* Galerie auf Handy */
+
+@media (max-width: 700px){
+
+    .galerie-grid{
+
+        grid-template-columns:1fr;
+
+        gap:30px;
+
+        width:92%;
+
+    }
+
+}
