@@ -660,3 +660,8 @@ h1{
         0 0 15px rgba(139,0,0,.45);
 
 }
+.album-titel{
+    font-family:"UnifrakturCook", serif;
+    font-size:58px;
+    color:#e8e8e8;
+}
