@@ -102,6 +102,40 @@
     data-path="/FallenAngels/"
     defer>
 </script>
+    <script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+    setTimeout(function(){
+
+        fetch("https://page-views-api.ratneshc.com/api/v1/views?site=noctisnexus.github.io&path=/FallenAngels/")
+        
+        .then(response => response.json())
+
+        .then(data => {
+
+            const counter = document.querySelector(".visitor-number");
+
+            if(counter && typeof data.views === "number"){
+
+                counter.textContent =
+                    String(data.views).padStart(6, "0");
+
+            }
+
+        })
+
+        .catch(error => {
+
+            console.log("Besucherzähler konnte nicht geladen werden.");
+
+        });
+
+    }, 500);
+
+});
+
+</script>
 </body>
 
 </html>
