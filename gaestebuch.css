@@ -1,7 +1,7 @@
 /* =========================================
 FALLENANGELS
 GÄSTEBUCH
-Gothic / Menü-Stil
+passend zu Musik / Galerie / Über uns
 ========================================= */
 
 /* =========================================
@@ -36,7 +36,7 @@ min-height: 100vh;
 HAUPTBEREICH
 ========================================= */
 
-.guestbook-page {
+main {
 
 width: 100%;
 
@@ -50,7 +50,6 @@ text-align: center;
 
 /* =========================================
 BANNER
-gleiche Grundgröße wie andere Menüs
 ========================================= */
 
 .banner {
@@ -63,29 +62,15 @@ max-width: 760px;
 
 height: auto;
 
-margin: 20px auto 45px;
+margin: 20px auto 50px;
 
 }
 
 /* =========================================
-INHALT
+ÜBERSCHRIFT
 ========================================= */
 
-.guestbook-content {
-
-width: 90%;
-
-max-width: 900px;
-
-margin: 0 auto;
-
-}
-
-/* =========================================
-HAUPTÜBERSCHRIFT
-========================================= */
-
-.guestbook-content h1 {
+h1 {
 
 font-family: "Cinzel", serif;
 
@@ -97,7 +82,7 @@ color: #ececec;
 
 letter-spacing: 2px;
 
-margin-bottom: 18px;
+margin-bottom: 20px;
 
 text-shadow:
     0 0 10px rgba(139,0,0,.25);
@@ -108,7 +93,7 @@ text-shadow:
 EINLEITUNG
 ========================================= */
 
-.guestbook-content > .text {
+.text {
 
 font-family: "Cormorant Garamond", serif;
 
@@ -118,15 +103,15 @@ font-style: italic;
 
 color: #d6d6d6;
 
-margin-bottom: 40px;
+margin-bottom: 45px;
 
 }
 
 /* =========================================
-GÄSTEBUCH-BEREICH
+GÄSTEBUCH
 ========================================= */
 
-.atabook-container {
+.gaestebuch-bereich {
 
 width: 82%;
 
@@ -134,7 +119,7 @@ max-width: 650px;
 
 margin: 0 auto 45px;
 
-padding: 25px 22px;
+padding: 25px 20px;
 
 background:
     linear-gradient(
@@ -153,10 +138,10 @@ box-shadow:
 }
 
 /* =========================================
-GÄSTEBUCH TITEL
+TITEL IM GÄSTEBUCH
 ========================================= */
 
-.atabook-container h2 {
+.gaestebuch-bereich h2 {
 
 font-family: "Cinzel", serif;
 
@@ -173,10 +158,10 @@ margin-bottom: 12px;
 }
 
 /* =========================================
-GÄSTEBUCH TEXT
+TEXT IM GÄSTEBUCH
 ========================================= */
 
-.atabook-text {
+.gaestebuch-bereich .text {
 
 font-family: "Cormorant Garamond", serif;
 
@@ -219,13 +204,12 @@ letter-spacing: 1px;
 transition:
     background .35s,
     box-shadow .35s,
-    transform .25s,
-    color .35s;
+    transform .25s;
 
 }
 
 /* =========================================
-BUTTON HOVER
+BUTTON AUFLEUCHTEN
 ========================================= */
 
 .button {
@@ -242,7 +226,7 @@ transform: translateY(-2px);
 }
 
 /* =========================================
-ZURÜCK BUTTON
+ZURÜCK
 ========================================= */
 
 .back-button {
@@ -279,19 +263,12 @@ MOBILE
 
     max-width: 600px;
 
-    margin: 15px auto 35px;
+    margin: 15px auto 40px;
 
 }
 
 
-.guestbook-content {
-
-    width: 94%;
-
-}
-
-
-.guestbook-content h1 {
+h1 {
 
     font-size: 32px;
 
@@ -300,32 +277,32 @@ MOBILE
 }
 
 
-.guestbook-content > .text {
+.text {
 
     font-size: 22px;
 
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 
 }
 
 
-.atabook-container {
+.gaestebuch-bereich {
 
     width: 92%;
 
-    padding: 22px 15px;
+    padding: 22px 16px;
 
 }
 
 
-.atabook-container h2 {
+.gaestebuch-bereich h2 {
 
     font-size: 22px;
 
 }
 
 
-.atabook-text {
+.gaestebuch-bereich .text {
 
     font-size: 18px;
 
@@ -336,7 +313,7 @@ MOBILE
 
     font-size: 13px;
 
-    padding: 11px 21px;
+    padding: 11px 22px;
 
 }
 
@@ -351,21 +328,21 @@ MOBILE
 }
 
 
-.guestbook-content h1 {
+h1 {
 
-    font-size: 25px;
+    font-size: 26px;
 
 }
 
 
-.guestbook-content > .text {
+.text {
 
     font-size: 19px;
 
 }
 
 
-.atabook-container {
+.gaestebuch-bereich {
 
     width: 96%;
 
