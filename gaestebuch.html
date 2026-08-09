@@ -1,152 +1,126 @@
-<!DOCTYPE html>
+/* ========================================= */
+/* Gästebuch                                */
+/* ========================================= */
 
-<html lang="de">
+.gaestebuch-bereich{
 
-<head>
+    width:90%;
 
-<meta charset="UTF-8">
+    max-width:700px;
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    margin:0 auto 60px;
 
-<title>Gästebuch der verlorenen Seelen | FallenAngels</title>
+    padding:30px;
 
+    background:linear-gradient(
+        180deg,
+        #1b1b1b,
+        #111111
+    );
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+    border:1px solid #353535;
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    border-radius:10px;
 
+    box-shadow:
+        0 0 20px rgba(0,0,0,.6);
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;600&display=swap"
-      rel="stylesheet">
+}
 
 
-<link rel="stylesheet" href="gaestebuch.css">
+.gaestebuch-bereich h2{
 
-</head>
+    font-family:"Cinzel", serif;
 
-<body>
+    font-size:28px;
 
-<main class="guestbook-page">
+    color:#efefef;
 
-<!-- ================================= -->
-<!-- Banner                            -->
-<!-- ================================= -->
+    margin-bottom:25px;
 
-<img src="banner.png"
-     class="banner"
-     alt="FallenAngels">
+}
 
 
+.gaestebuch-bereich input,
+.gaestebuch-bereich textarea{
 
-<!-- ================================= -->
-<!-- FA Logo                           -->
-<!-- ================================= -->
+    display:block;
 
-<img src="FA-Logo.png"
-     class="guestbook-logo"
-     alt="FallenAngels">
+    width:100%;
 
+    margin-bottom:20px;
 
+    padding:14px;
 
-<!-- ================================= -->
-<!-- Titel                             -->
-<!-- ================================= -->
+    background:#080808;
 
-<div class="guestbook-heading">
+    color:#eee;
 
-    <div class="ornament">
-        ✠
-    </div>
+    border:1px solid #444;
 
+    border-radius:5px;
 
-    <h1>
-        Gästebuch der verlorenen Seelen
-    </h1>
+    font-family:"Cormorant Garamond", serif;
 
+    font-size:20px;
 
-    <div class="heading-line"></div>
+}
 
 
-    <p>
-        Hinterlasse einen Gedanken,
-        eine Erinnerung oder ein paar Worte.
-    </p>
+.gaestebuch-bereich textarea{
 
-</div>
+    resize:vertical;
 
+    min-height:140px;
 
+}
 
-<!-- ================================= -->
-<!-- Gästebuch                          -->
-<!-- ================================= -->
 
-<section class="guestbook-card">
+.gaestebuch-bereich input:focus,
+.gaestebuch-bereich textarea:focus{
 
+    outline:none;
 
-    <div class="card-symbol">
-        ❦
-    </div>
+    border-color:#8b0000;
 
+    box-shadow:
+        0 0 10px rgba(139,0,0,.25);
 
-    <h2>
-        Eintrag hinterlassen
-    </h2>
+}
 
 
-    <p class="guestbook-intro">
+.gaestebuch-bereich button{
 
-        Deine Worte bleiben als Teil unserer Reise zurück.
+    display:inline-block;
 
-    </p>
+    padding:14px 30px;
 
+    background:transparent;
 
+    color:#fff;
 
-    <div class="atabook-frame">
+    border:1px solid #8b0000;
 
+    border-radius:6px;
 
-        <iframe
-            src="https://fallenangels.atabook.org/"
-            class="atabook"
-            title="FallenAngels Gästebuch">
-        </iframe>
+    font-family:"Cinzel", serif;
 
+    font-size:17px;
 
-    </div>
+    letter-spacing:1px;
 
+    cursor:pointer;
 
-</section>
+    transition:.35s;
 
+}
 
 
-<!-- ================================= -->
-<!-- Zurück                            -->
-<!-- ================================= -->
+.gaestebuch-bereich button:hover{
 
-<a href="index.html"
-   class="back-button">
+    background:#8b0000;
 
-    ✠ Zurück zu FallenAngels ✠
+    box-shadow:
+        0 0 15px rgba(139,0,0,.45);
 
-</a>
-
-
-
-<!-- ================================= -->
-<!-- Footer                            -->
-<!-- ================================= -->
-
-<footer class="guestbook-footer">
-
-    <div class="footer-line"></div>
-
-    <p>
-        © 2026 FallenAngels
-    </p>
-
-</footer>
-
-</main>
-
-</body>
-
-</html>
+}
