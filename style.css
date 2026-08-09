@@ -894,3 +894,129 @@ h1{
         0 0 25px rgba(0,0,0,.7);
 
 }
+/* ========================================= */
+/* Gästebuch                                */
+/* ========================================= */
+
+.gaestebuch-bereich{
+
+    width:90%;
+
+    max-width:700px;
+
+    margin:0 auto 60px;
+
+    padding:30px;
+
+    background:linear-gradient(
+        180deg,
+        #1b1b1b,
+        #111111
+    );
+
+    border:1px solid #353535;
+
+    border-radius:10px;
+
+    box-shadow:
+        0 0 20px rgba(0,0,0,.6);
+
+}
+
+
+.gaestebuch-bereich h2{
+
+    font-family:"Cinzel", serif;
+
+    font-size:28px;
+
+    color:#efefef;
+
+    margin-bottom:25px;
+
+}
+
+
+.gaestebuch-bereich input,
+.gaestebuch-bereich textarea{
+
+    display:block;
+
+    width:100%;
+
+    margin-bottom:20px;
+
+    padding:14px;
+
+    background:#080808;
+
+    color:#eee;
+
+    border:1px solid #444;
+
+    border-radius:5px;
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:20px;
+
+}
+
+
+.gaestebuch-bereich textarea{
+
+    resize:vertical;
+
+    min-height:140px;
+
+}
+
+
+.gaestebuch-bereich input:focus,
+.gaestebuch-bereich textarea:focus{
+
+    outline:none;
+
+    border-color:#8b0000;
+
+    box-shadow:
+        0 0 10px rgba(139,0,0,.25);
+
+}
+
+
+.gaestebuch-bereich button{
+
+    display:inline-block;
+
+    padding:14px 30px;
+
+    background:transparent;
+
+    color:#fff;
+
+    border:1px solid #8b0000;
+
+    border-radius:6px;
+
+    font-family:"Cinzel", serif;
+
+    font-size:17px;
+
+    letter-spacing:1px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+
+.gaestebuch-bereich button:hover{
+
+    background:#8b0000;
+
+    box-shadow:
+        0 0 15px rgba(139,0,0,.45);
+
+}
