@@ -54,22 +54,12 @@ BANNER
 ========================================= */
 
 .banner {
-
-display: block;
-
-width: 100%;
-
-max-width: 850px;
-
-height: auto;
-
-margin: 0 auto;
-
-box-shadow:
-    0 12px 30px #000;
-
+    display: block;
+    width: 70%;
+    max-width: 760px;
+    height: auto;
+    margin: 20px auto 40px;
 }
-
 
 
 
