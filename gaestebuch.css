@@ -1,7 +1,7 @@
 /* =========================================
 FALLENANGELS
-Gästebuch
-passend zu den anderen Menüs
+GÄSTEBUCH
+Gothic / Menü-Stil
 ========================================= */
 
 /* =========================================
@@ -28,6 +28,8 @@ font-family: Georgia, serif;
 
 line-height: 1.6;
 
+min-height: 100vh;
+
 }
 
 /* =========================================
@@ -48,7 +50,7 @@ text-align: center;
 
 /* =========================================
 BANNER
-wie bei den anderen Menüs
+gleiche Grundgröße wie andere Menüs
 ========================================= */
 
 .banner {
@@ -61,7 +63,7 @@ max-width: 760px;
 
 height: auto;
 
-margin: 20px auto 50px;
+margin: 20px auto 45px;
 
 }
 
@@ -80,10 +82,10 @@ margin: 0 auto;
 }
 
 /* =========================================
-ÜBERSCHRIFT
+HAUPTÜBERSCHRIFT
 ========================================= */
 
-h1 {
+.guestbook-content h1 {
 
 font-family: "Cinzel", serif;
 
@@ -106,7 +108,7 @@ text-shadow:
 EINLEITUNG
 ========================================= */
 
-.text {
+.guestbook-content > .text {
 
 font-family: "Cormorant Garamond", serif;
 
@@ -116,24 +118,23 @@ font-style: italic;
 
 color: #d6d6d6;
 
-margin-bottom: 45px;
+margin-bottom: 40px;
 
 }
 
 /* =========================================
 GÄSTEBUCH-BEREICH
-bewusst wie die anderen Menüs
 ========================================= */
 
 .atabook-container {
 
-width: 90%;
+width: 82%;
 
-max-width: 700px;
+max-width: 650px;
 
 margin: 0 auto 45px;
 
-padding: 28px 25px;
+padding: 25px 22px;
 
 background:
     linear-gradient(
@@ -152,36 +153,40 @@ box-shadow:
 }
 
 /* =========================================
-GÄSTEBUCH ÜBERSCHRIFT
+GÄSTEBUCH TITEL
 ========================================= */
 
 .atabook-container h2 {
 
 font-family: "Cinzel", serif;
 
-font-size: 27px;
+font-size: 25px;
+
+font-weight: 600;
 
 color: #eeeeee;
 
-margin-bottom: 15px;
+letter-spacing: 1px;
+
+margin-bottom: 12px;
 
 }
 
 /* =========================================
-TEXT
+GÄSTEBUCH TEXT
 ========================================= */
 
 .atabook-text {
 
 font-family: "Cormorant Garamond", serif;
 
-font-size: 21px;
+font-size: 19px;
 
 font-style: italic;
 
 color: #cfcfcf;
 
-margin-bottom: 25px;
+margin-bottom: 22px;
 
 }
 
@@ -193,9 +198,11 @@ BUTTON
 
 display: inline-block;
 
-padding: 13px 28px;
+padding: 12px 27px;
 
-color: #fff;
+background: transparent;
+
+color: #eeeeee;
 
 text-decoration: none;
 
@@ -205,20 +212,27 @@ border-radius: 6px;
 
 font-family: "Cinzel", serif;
 
-font-size: 16px;
+font-size: 15px;
 
 letter-spacing: 1px;
 
 transition:
     background .35s,
     box-shadow .35s,
-    transform .25s;
+    transform .25s,
+    color .35s;
 
 }
+
+/* =========================================
+BUTTON HOVER
+========================================= */
 
 .button {
 
 background: #8b0000;
+
+color: #fff;
 
 box-shadow:
     0 0 15px rgba(139,0,0,.45);
@@ -233,7 +247,7 @@ ZURÜCK BUTTON
 
 .back-button {
 
-margin-bottom: 60px;
+margin-bottom: 55px;
 
 }
 
@@ -265,7 +279,7 @@ MOBILE
 
     max-width: 600px;
 
-    margin-bottom: 40px;
+    margin: 15px auto 35px;
 
 }
 
@@ -277,50 +291,83 @@ MOBILE
 }
 
 
-h1 {
+.guestbook-content h1 {
 
     font-size: 32px;
+
+    letter-spacing: 1px;
 
 }
 
 
-.text {
+.guestbook-content > .text {
 
     font-size: 22px;
 
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 
 }
 
 
 .atabook-container {
 
-    width: 94%;
+    width: 92%;
 
-    padding: 25px 18px;
+    padding: 22px 15px;
 
 }
 
 
 .atabook-container h2 {
 
-    font-size: 23px;
+    font-size: 22px;
 
 }
 
 
 .atabook-text {
 
-    font-size: 19px;
+    font-size: 18px;
 
 }
 
 
 .button {
 
-    font-size: 14px;
+    font-size: 13px;
 
-    padding: 12px 22px;
+    padding: 11px 21px;
+
+}
+
+}
+
+@media (max-width: 500px) {
+
+.banner {
+
+    width: 96%;
+
+}
+
+
+.guestbook-content h1 {
+
+    font-size: 25px;
+
+}
+
+
+.guestbook-content > .text {
+
+    font-size: 19px;
+
+}
+
+
+.atabook-container {
+
+    width: 96%;
 
 }
 
