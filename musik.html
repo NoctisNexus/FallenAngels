@@ -2,7 +2,6 @@
 <html lang="de">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,85 +10,139 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;600&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="musik.css">
 </head>
 
 <body>
 
-<div class="seite">
+    <main class="music-page">
 
-    <img src="banner.png"
-         class="banner"
-         alt="FallenAngels">
+        <img
+            src="banner.png"
+            class="music-banner"
+            alt="FallenAngels">
 
-    <h1>Unsere Musik</h1>
+        <section class="music-frame">
 
-    <p class="text">
-        „Wo Worte enden,<br>
-        beginnt unsere Musik.“
-        <!-- FallenAngels Radio -->
+            <h1>Musik der verlorenen Seelen</h1>
 
-<div class="radio-box">
+            <div class="music-line"></div>
 
-    <h2>FallenAngels Radio</h2>
-
-    <a href="https://stream.laut.fm/fallenangels"
-       target="_blank"
-       rel="noopener"
-       class="radio-button">
-
-        ▶ Radio starten
-
-    </a>
-
-</div>
-    </p>
-
-    <div class="song-grid">
-
-        <div class="karte">
-
-          <a href="darkangel.html">
-    <img src="darkangel-cover.png"
-         class="cover"
-         alt="DarkAngel">
-</a>
-          <h3>DarkAngel</h3>
-
-            <p>
-                Eine Reise zwischen Licht und Schatten.
+            <p class="music-intro">
+                Musik für die Schatten, die Erinnerungen und die verlorenen Seelen.
             </p>
+
+            <div class="player">
+
+                <div class="song-info">
+                    <div class="song-title" id="song-title">
+                        Noch kein Titel
+                    </div>
+
+                    <div class="song-status" id="song-status">
+                        Bereit
+                    </div>
+                </div>
+
+
+                <audio id="audio-player" preload="metadata">
+                    Dein Browser unterstützt den Audio-Player nicht.
+                </audio>
+
+
+                <div class="progress-area">
+
+                    <span id="current-time">0:00</span>
+
+                    <input
+                        type="range"
+                        id="progress"
+                        min="0"
+                        max="100"
+                        value="0">
+
+                    <span id="duration">0:00</span>
+
+                </div>
+
+
+                <div class="player-controls">
+
+                    <button
+                        type="button"
+                        id="previous"
+                        aria-label="Vorheriger Titel">
+                        ⏮
+                    </button>
+
+                    <button
+                        type="button"
+                        id="play"
+                        class="play-button"
+                        aria-label="Wiedergabe">
+                        ▶
+                    </button>
+
+                    <button
+                        type="button"
+                        id="next"
+                        aria-label="Nächster Titel">
+                        ⏭
+                    </button>
+
+                </div>
+
+
+                <div class="volume-area">
+
+                    <span>🔊</span>
+
+                    <input
+                        type="range"
+                        id="volume"
+                        min="0"
+                        max="1"
+                        step="0.01"
+                        value="0.8">
+
+                </div>
+
+            </div>
+
+
+            <div class="playlist">
+
+                <h2>Playlist</h2>
+
+                <div id="playlist"></div>
+
+            </div>
+
+        </section>
+
+
+        <div class="music-back">
+
+            <a href="index.html" class="music-back-button">
+                ← Zurück zur Startseite
+            </a>
 
         </div>
 
-        <div class="karte">
+    </main>
 
-          <a href="windows-in-black.html">
-    <img src="windows-in-black-cover.png"
-         class="cover"
-         alt="Windows in Black">
-</a>
 
-       <h3>Windows in Black</h3> 
-            <p>
-                Zwischen Dunkelheit,
-                Erinnerungen und Emotionen.
-            </p>
+    <footer>
+        © 2026 FallenAngels
+    </footer>
 
-        </div>
 
-    </div>
-
-    <a href="index.html" class="button">
-
-        ⬅ Zurück zur Startseite
-
-    </a>
-
-</div>
+    <script src="musik.js"></script>
 
 </body>
 
