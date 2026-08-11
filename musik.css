@@ -688,3 +688,139 @@ body > footer {
         font-size: 11px;
     }
 }
+/* =========================================
+   ALBUM-COVER NEBENEINANDER
+   ========================================= */
+
+.album-selection {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 45px;
+
+    width: 100%;
+    max-width: 800px;
+
+    margin: 35px auto 10px;
+}
+
+
+/* =========================================
+   ALBUM
+   ========================================= */
+
+.album-card {
+    flex: 1;
+    max-width: 330px;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   COVER
+   ========================================= */
+
+.album-cover {
+    display: block;
+
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+
+    margin: 0 auto;
+
+    border: 1px solid #444;
+
+    box-shadow:
+        0 0 0 3px #080808,
+        0 0 0 4px #292929,
+        0 0 18px rgba(0, 0, 0, .8);
+
+    transition:
+        transform .3s,
+        box-shadow .3s,
+        border-color .3s;
+}
+
+
+/* =========================================
+   COVER HOVER
+   ========================================= */
+
+.album-card a:hover .album-cover {
+    transform: translateY(-4px);
+
+    border-color: #760000;
+
+    box-shadow:
+        0 0 0 3px #080808,
+        0 0 0 4px #5a0000,
+        0 0 22px rgba(139, 0, 0, .5);
+}
+
+
+/* =========================================
+   ALBUM TITEL
+   ========================================= */
+
+.album-card h2 {
+    margin: 18px 0 8px;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    color: #d0d0d0;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        0 2px 4px #000,
+        0 0 10px rgba(139, 0, 0, .2);
+}
+
+
+/* =========================================
+   ALBUM SPRUCH
+   ========================================= */
+
+.album-card p {
+    max-width: 290px;
+
+    margin: 0 auto;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 17px;
+    font-style: italic;
+
+    line-height: 1.4;
+
+    color: #999;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    .album-selection {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 35px;
+    }
+
+    .album-card {
+        width: 100%;
+        max-width: 330px;
+    }
+
+}
