@@ -4,9 +4,9 @@
    ========================================================= */
 
 const songs = [
- {
+{
     title: "Ashes in My Heart",
-    file: "musik/Ashes in My Heart (1).mp3"
+    file: "musik/Ashes in My Heart.mp3"
 },
     {
         title: "Raven Oath",
