@@ -11,38 +11,40 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;600&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;600&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 
 </head>
 
+
 <body>
 
 <div class="seite">
 
-    <!-- Banner -->
+
+    <!-- BANNER -->
 
     <img src="banner.png"
          class="banner"
          alt="FallenAngels">
 
 
-    <!-- Titel -->
+    <!-- TITEL -->
 
-   <h1 class="album-titel">DarkAngel</h1>
+    <h1 class="album-titel">
+        DarkAngel
+    </h1>
 
 
-    <!-- Beschreibung -->
+    <!-- BESCHREIBUNG -->
 
     <p class="text">
-
         Eine Reise zwischen Licht und Schatten.
-
     </p>
 
 
-    <!-- Cover -->
+    <!-- COVER -->
 
     <div class="album-seite">
 
@@ -51,25 +53,114 @@
              alt="DarkAngel Cover">
 
 
-        <!-- MP3 -->
+        <!-- =====================================
+             MUSIKPLAYER
+             ===================================== -->
 
-        <div class="musik-player">
+        <div class="darkangel-player">
 
             <h2>DarkAngel hören</h2>
 
-            <audio controls>
 
-                <source src="darkangel.mp3"
-                        type="audio/mpeg">
+            <!-- Aktueller Titel -->
 
-                Dein Browser unterstützt keine Audio-Wiedergabe.
+            <div id="darkangel-song-title">
+                Ashes in My Heart
+            </div>
 
+
+            <div id="darkangel-song-status">
+                Bereit
+            </div>
+
+
+            <!-- Audio -->
+
+            <audio id="darkangel-audio"
+                   preload="metadata">
             </audio>
+
+
+            <!-- Steuerung -->
+
+            <div class="darkangel-controls">
+
+                <button id="darkangel-previous"
+                        type="button">
+                    ◀
+                </button>
+
+
+                <button id="darkangel-play"
+                        type="button">
+                    ▶
+                </button>
+
+
+                <button id="darkangel-next"
+                        type="button">
+                    ▶
+                </button>
+
+            </div>
+
+
+            <!-- Fortschritt -->
+
+            <div class="darkangel-progress">
+
+                <span id="darkangel-current-time">
+                    0:00
+                </span>
+
+                <input
+                    id="darkangel-progress"
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="0">
+
+                <span id="darkangel-duration">
+                    0:00
+                </span>
+
+            </div>
+
+
+            <!-- Lautstärke -->
+
+            <div class="darkangel-volume">
+
+                <span>🔊</span>
+
+                <input
+                    id="darkangel-volume"
+                    type="range"
+                    min="0"
+                    max="1"
+                    step="0.01"
+                    value="0.8">
+
+            </div>
+
+
+            <!-- PLAYLIST -->
+
+            <div class="darkangel-playlist">
+
+                <h3>Playlist</h3>
+
+                <div id="darkangel-playlist">
+                </div>
+
+            </div>
 
         </div>
 
 
-        <!-- YouTube -->
+        <!-- =====================================
+             YOUTUBE
+             ===================================== -->
 
         <div class="musik-link">
 
@@ -86,7 +177,9 @@
         </div>
 
 
-        <!-- SoundCloud -->
+        <!-- =====================================
+             SOUNDCLOUD
+             ===================================== -->
 
         <div class="musik-link">
 
@@ -102,10 +195,11 @@
 
         </div>
 
+
     </div>
 
 
-    <!-- Zurück -->
+    <!-- ZURÜCK -->
 
     <a href="musik.html"
        class="button">
@@ -114,7 +208,332 @@
 
     </a>
 
+
 </div>
+
+
+<!-- =========================================
+     DARKANGEL PLAYER JAVASCRIPT
+     ========================================= -->
+
+<script>
+
+const darkangelSongs = [
+
+    {
+        title: "Ashes in My Heart",
+        file: "musik/Ashes in My Heart.mp3"
+    }
+
+];
+
+
+const audio =
+    document.getElementById("darkangel-audio");
+
+const playButton =
+    document.getElementById("darkangel-play");
+
+const previousButton =
+    document.getElementById("darkangel-previous");
+
+const nextButton =
+    document.getElementById("darkangel-next");
+
+const progress =
+    document.getElementById("darkangel-progress");
+
+const volume =
+    document.getElementById("darkangel-volume");
+
+const currentTime =
+    document.getElementById("darkangel-current-time");
+
+const duration =
+    document.getElementById("darkangel-duration");
+
+const songTitle =
+    document.getElementById("darkangel-song-title");
+
+const songStatus =
+    document.getElementById("darkangel-song-status");
+
+const playlist =
+    document.getElementById("darkangel-playlist");
+
+
+let currentSong = 0;
+
+
+function formatTime(seconds) {
+
+    if (!Number.isFinite(seconds)) {
+        return "0:00";
+    }
+
+    const minutes =
+        Math.floor(seconds / 60);
+
+    const secondsRest =
+        Math.floor(seconds % 60)
+        .toString()
+        .padStart(2, "0");
+
+    return `${minutes}:${secondsRest}`;
+
+}
+
+
+function loadSong(index) {
+
+    currentSong = index;
+
+    const song =
+        darkangelSongs[currentSong];
+
+    audio.src = song.file;
+
+    songTitle.textContent =
+        song.title;
+
+    songStatus.textContent =
+        "Bereit";
+
+    progress.value = 0;
+
+    currentTime.textContent =
+        "0:00";
+
+    duration.textContent =
+        "0:00";
+
+    createPlaylist();
+
+}
+
+
+function createPlaylist() {
+
+    playlist.innerHTML = "";
+
+    darkangelSongs.forEach(
+        (song, index) => {
+
+            const item =
+                document.createElement("div");
+
+            item.className =
+                "darkangel-playlist-item";
+
+            item.textContent =
+                song.title;
+
+            if (index === currentSong) {
+                item.classList.add("active");
+            }
+
+            item.addEventListener(
+                "click",
+                () => {
+
+                    loadSong(index);
+
+                    audio.play();
+
+                }
+            );
+
+            playlist.appendChild(item);
+
+        }
+    );
+
+}
+
+
+function updatePlayButton() {
+
+    if (audio.paused) {
+
+        playButton.textContent =
+            "▶";
+
+        songStatus.textContent =
+            "Bereit";
+
+    } else {
+
+        playButton.textContent =
+            "Ⅱ";
+
+        songStatus.textContent =
+            "Wiedergabe";
+
+    }
+
+}
+
+
+playButton.addEventListener(
+    "click",
+    () => {
+
+        if (audio.paused) {
+
+            audio.play();
+
+        } else {
+
+            audio.pause();
+
+        }
+
+    }
+);
+
+
+previousButton.addEventListener(
+    "click",
+    () => {
+
+        currentSong--;
+
+        if (currentSong < 0) {
+            currentSong =
+                darkangelSongs.length - 1;
+        }
+
+        loadSong(currentSong);
+
+        audio.play();
+
+    }
+);
+
+
+nextButton.addEventListener(
+    "click",
+    () => {
+
+        currentSong++;
+
+        if (
+            currentSong >=
+            darkangelSongs.length
+        ) {
+
+            currentSong = 0;
+
+        }
+
+        loadSong(currentSong);
+
+        audio.play();
+
+    }
+);
+
+
+audio.addEventListener(
+    "play",
+    updatePlayButton
+);
+
+
+audio.addEventListener(
+    "pause",
+    updatePlayButton
+);
+
+
+audio.addEventListener(
+    "timeupdate",
+    () => {
+
+        if (!audio.duration) {
+            return;
+        }
+
+        progress.value =
+            (audio.currentTime /
+             audio.duration) * 100;
+
+        currentTime.textContent =
+            formatTime(
+                audio.currentTime
+            );
+
+    }
+);
+
+
+audio.addEventListener(
+    "loadedmetadata",
+    () => {
+
+        duration.textContent =
+            formatTime(
+                audio.duration
+            );
+
+    }
+);
+
+
+progress.addEventListener(
+    "input",
+    () => {
+
+        if (!audio.duration) {
+            return;
+        }
+
+        audio.currentTime =
+            (progress.value / 100) *
+            audio.duration;
+
+    }
+);
+
+
+volume.addEventListener(
+    "input",
+    () => {
+
+        audio.volume =
+            volume.value;
+
+    }
+);
+
+
+audio.addEventListener(
+    "ended",
+    () => {
+
+        nextButton.click();
+
+    }
+);
+
+
+audio.addEventListener(
+    "error",
+    () => {
+
+        songStatus.textContent =
+            "Audiodatei nicht gefunden";
+
+    }
+);
+
+
+audio.volume = 0.8;
+
+loadSong(0);
+
+</script>
+
 
 </body>
 
