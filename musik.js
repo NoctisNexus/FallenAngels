@@ -120,7 +120,8 @@ function loadSong(index) {
 
     const song = songs[currentSong];
 
-    audio.src = song.download_url;
+   audio.src = song.download_url;
+audio.load();
 
     title.textContent = cleanTitle(song.name);
 
