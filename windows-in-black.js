@@ -223,63 +223,64 @@ async function createPlaylist() {
 
     playlist.innerHTML = "";
 
-    windowsSongs.forEach(async (song, index) => {
+    windowsSongs.forEach((song, index) => {
 
-        const item =
-            document.createElement("div");
-
-        item.className =
-            "playlist-song";
+        const item = document.createElement("div");
+        item.className = "playlist-song";
 
 
-        const songName =
-            document.createElement("span");
-
-        songName.textContent =
-            song.title;
+        const songName = document.createElement("span");
+        songName.textContent = song.title;
 
 
-        const likeButton =
-            document.createElement("button");
-
-        likeButton.type =
-            "button";
-
-        likeButton.className =
-            "like-button";
-
-        likeButton.textContent =
-            "♡";
+        const likeButton = document.createElement("button");
+        likeButton.type = "button";
+        likeButton.className = "like-button";
+        likeButton.textContent = "♡";
 
 
-        const likeCount =
-            document.createElement("span");
-
-        likeCount.className =
-            "like-count";
-
-        likeCount.textContent =
-            "0";
+        const likeCount = document.createElement("span");
+        likeCount.className = "like-count";
+        likeCount.textContent = "0";
 
 
-        // -------------------------------------------------
-        // LIKE-ZAHL LADEN
-        // -------------------------------------------------
+        // Titel + Herz + Like-Zahl SOFORT anzeigen
+        item.appendChild(songName);
+        item.appendChild(likeButton);
+        item.appendChild(likeCount);
 
-        const id =
-            songId(song);
-
-        const likes =
-            await getLikes(id);
-
-        likeCount.textContent =
-            likes;
+        playlist.appendChild(item);
 
 
-        // -------------------------------------------------
-        // LIKE-KLICK
-        // -------------------------------------------------
+        // Song auswählen
+        item.addEventListener("click", () => {
 
+            loadSong(index);
+            playSong();
+
+        });
+
+
+        // Likes danach im Hintergrund laden
+        const id = songId(song);
+
+        getLikes(id)
+            .then(likes => {
+
+                likeCount.textContent = likes;
+
+            })
+            .catch(error => {
+
+                console.error(
+                    "Likes konnten nicht geladen werden:",
+                    error
+                );
+
+            });
+
+
+        // Like anklicken
         likeButton.addEventListener(
             "click",
             async (event) => {
@@ -305,51 +306,23 @@ async function createPlaylist() {
 
                 } catch (error) {
 
-                    console.error(error);
+                    console.error(
+                        "Like konnte nicht gespeichert werden:",
+                        error
+                    );
 
                 } finally {
 
-                    likeButton.disabled =
-                        false;
+                    likeButton.disabled = false;
+
                 }
 
             }
         );
 
-
-        // -------------------------------------------------
-        // ZEILE
-        // -------------------------------------------------
-
-        item.appendChild(songName);
-
-        item.appendChild(likeButton);
-
-        item.appendChild(likeCount);
-
-
-        // -------------------------------------------------
-        // SONG AUSWÄHLEN
-        // -------------------------------------------------
-
-        item.addEventListener(
-            "click",
-            () => {
-
-                loadSong(index);
-
-                playSong();
-
-            }
-        );
-
-
-        playlist.appendChild(item);
-
     });
 
 }
-
 
 // =========================================================
 // SONG LADEN
