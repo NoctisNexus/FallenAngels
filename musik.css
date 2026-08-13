@@ -824,3 +824,34 @@ body > footer {
     }
 
 }
+/* =========================================
+   MEHR ABSTAND ZWISCHEN PLAYLIST-TITELN
+   ========================================= */
+
+.playlist-song {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 42px;
+    padding: 10px 14px;
+    margin-bottom: 6px;
+
+    line-height: 1.5;
+}
+
+/* Aktiver Titel */
+.playlist-song.active {
+    min-height: 46px;
+}
+
+/* Auf kleineren Bildschirmen etwas kompakter */
+@media (max-width: 700px) {
+
+    .playlist-song {
+        min-height: 38px;
+        padding: 8px 10px;
+        margin-bottom: 5px;
+    }
+
+}
