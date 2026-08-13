@@ -10,7 +10,7 @@ const SUPABASE_KEY =
 
 
 
- const windowsSongs = [
+const windowsSongs = [
     {
         title: "Remember",
         file: "musik/Remember.mp3"
@@ -18,14 +18,12 @@ const SUPABASE_KEY =
     {
         title: "Behind the Mask",
         file: "musik/Behind the Mask.mp3"
+    },
+    {
+        title: "In to the Grey",
+        file: "musik/In to the Grey.mp3"
     }
-     {
-    title: "In to the Grey",
-    file: "musik/In to the Grey.mp3"
-}
 ];
-
-
 const audio =
     document.getElementById("windows-audio");
 
