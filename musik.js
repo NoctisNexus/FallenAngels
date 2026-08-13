@@ -18,6 +18,11 @@ const duration = document.getElementById("duration");
 const volume = document.getElementById("volume");
 const playlistContainer = document.getElementById("playlist");
 
+const SUPABASE_URL =
+    "https://jouzmuomffqtgeyggkv.supabase.co";
+
+const SUPABASE_KEY =
+    "sb_publishable_d-UCXEnc0uTD4qz49hPjzg_ij6XWFyA";
 let songs = [];
 let currentSong = 0;
 
@@ -133,31 +138,107 @@ function createPlaylist() {
 
     songs.forEach((song, index) => {
 
-        const item =
-            document.createElement("div");
+        const item = document.createElement("div");
+        item.className = "playlist-song";
 
-        item.className =
-            "playlist-song";
+        const songName = document.createElement("span");
+        songName.textContent = getSongTitle(song.name);
 
-        item.textContent =
-            getSongTitle(song.name);
+        const likeButton = document.createElement("button");
+        likeButton.type = "button";
+        likeButton.className = "like-button";
+        likeButton.textContent = "♡";
 
+        const likeCount = document.createElement("span");
+        likeCount.className = "like-count";
+        likeCount.textContent = "0";
 
-        item.addEventListener(
-            "click",
-            () => {
+        likeButton.addEventListener("click", async (event) => {
 
-                loadSong(index);
-                playSong();
+            event.stopPropagation();
+
+            const songId = song.name;
+
+            try {
+
+                const existingResponse = await fetch(
+                    `${SUPABASE_URL}/rest/v1/song_likes?select=song_id,likes&song_id=eq.${encodeURIComponent(songId)}`,
+                    {
+                        headers: {
+                            apikey: SUPABASE_KEY,
+                            Authorization: `Bearer ${SUPABASE_KEY}`
+                        }
+                    }
+                );
+
+                const existing = await existingResponse.json();
+
+                let likes = 0;
+
+                if (existing.length === 0) {
+
+                    await fetch(
+                        `${SUPABASE_URL}/rest/v1/song_likes`,
+                        {
+                            method: "POST",
+                            headers: {
+                                apikey: SUPABASE_KEY,
+                                Authorization: `Bearer ${SUPABASE_KEY}`,
+                                "Content-Type": "application/json"
+                            },
+                            body: JSON.stringify({
+                                song_id: songId,
+                                likes: 1
+                            })
+                        }
+                    );
+
+                    likes = 1;
+
+                } else {
+
+                    likes = Number(existing[0].likes) + 1;
+
+                    await fetch(
+                        `${SUPABASE_URL}/rest/v1/song_likes?song_id=eq.${encodeURIComponent(songId)}`,
+                        {
+                            method: "PATCH",
+                            headers: {
+                                apikey: SUPABASE_KEY,
+                                Authorization: `Bearer ${SUPABASE_KEY}`,
+                                "Content-Type": "application/json"
+                            },
+                            body: JSON.stringify({
+                                likes: likes
+                            })
+                        }
+                    );
+                }
+
+                likeCount.textContent = likes;
+                likeButton.textContent = "♥";
+
+            } catch (error) {
+
+                console.error("Like konnte nicht gespeichert werden:", error);
 
             }
-        );
 
+        });
+
+        item.appendChild(songName);
+        item.appendChild(likeButton);
+        item.appendChild(likeCount);
+
+        item.addEventListener("click", () => {
+
+            loadSong(index);
+            playSong();
+
+        });
 
         playlistContainer.appendChild(item);
-
     });
-
 
     updatePlaylist();
 }
