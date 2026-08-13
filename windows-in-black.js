@@ -9,13 +9,16 @@ const SUPABASE_KEY =
     "sb_publishable_d-UCXEnc0uTD4qz49hPjzg_ij6XWFyA";
 
 
-const windowsSongs = [
 
+ const windowsSongs = [
     {
         title: "Remember",
         file: "musik/Remember.mp3"
+    },
+    {
+        title: "Behind the Mask",
+        file: "musik/Behind the Mask.mp3"
     }
-
 ];
 
 
