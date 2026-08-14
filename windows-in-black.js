@@ -146,122 +146,10 @@ async function getLikes(id) {
 
 async function addLike(id) {
 
-    try {
-
-        const readResponse = await fetch(
-            `${SUPABASE_URL}/rest/v1/song_likes?select=likes&song_id=eq.${encodeURIComponent(id)}`,
-            {
-                method: "GET",
-                headers: {
-                    "apikey": SUPABASE_KEY,
-                    "Authorization": `Bearer ${SUPABASE_KEY}`
-                }
-            }
-        );
-
-        if (!readResponse.ok) {
-            throw new Error(
-                `Lesen fehlgeschlagen: ${readResponse.status}`
-            );
-        }
-
-        const data = await readResponse.json();
-
-
-        // Noch kein Eintrag vorhanden
-        if (data.length === 0) {
-
-            const insertResponse = await fetch(
-                `${SUPABASE_URL}/rest/v1/song_likes`,
-                {
-                    method: "POST",
-
-                    headers: {
-                        "apikey": SUPABASE_KEY,
-                        "Authorization": `Bearer ${SUPABASE_KEY}`,
-                        "Content-Type": "application/json",
-                        "Prefer": "return=representation"
-                    },
-
-                    body: JSON.stringify({
-                        song_id: id,
-                        likes: 1
-                    })
-                }
-            );
-
-
-            if (!insertResponse.ok) {
-
-                const errorText =
-                    await insertResponse.text();
-
-                throw new Error(
-                    `Anlegen fehlgeschlagen: ${insertResponse.status} ${errorText}`
-                );
-            }
-
-            return 1;
-        }
-
-
-        // Vorhandenen Wert erhöhen
-        const newLikes =
-            Number(data[0].likes || 0) + 1;
-
-
-        const updateResponse = await fetch(
-            `${SUPABASE_URL}/rest/v1/song_likes?song_id=eq.${encodeURIComponent(id)}`,
-            {
-                method: "PATCH",
-
-                headers: {
-                    "apikey": SUPABASE_KEY,
-                    "Authorization": `Bearer ${SUPABASE_KEY}`,
-                    "Content-Type": "application/json",
-                    "Prefer": "return=representation"
-                },
-
-                body: JSON.stringify({
-                    likes: newLikes
-                })
-            }
-        );
-
-
-        if (!updateResponse.ok) {
-
-            const errorText =
-                await updateResponse.text();
-
-            throw new Error(
-                `Aktualisieren fehlgeschlagen: ${updateResponse.status} ${errorText}`
-            );
-        }
-
-        return newLikes;
-
-
-    } catch (error) {
-
-        console.error(
-            "LIKE-FEHLER:",
-            error
-        );
-
-        throw error;
-    }
-
-
-    // Vorhandenen Like-Zähler erhöhen
-    const newLikes =
-        Number(data[0].likes || 0) + 1;
-
-
-    const updateResponse = await fetch(
-        `${SUPABASE_URL}/rest/v1/song_likes?song_id=eq.${encodeURIComponent(id)}`,
+    const response = await fetch(
+        `${SUPABASE_URL}/rest/v1/rpc/increment_song_like`,
         {
-            method: "PATCH",
+            method: "POST",
 
             headers: {
                 "apikey": SUPABASE_KEY,
@@ -270,17 +158,20 @@ async function addLike(id) {
             },
 
             body: JSON.stringify({
-                likes: newLikes
+                p_song_id: id
             })
         }
     );
 
+    const text = await response.text();
 
-    if (!updateResponse.ok) {
-        throw new Error("Like konnte nicht aktualisiert werden.");
+    if (!response.ok) {
+        throw new Error(
+            `Like fehlgeschlagen: ${response.status} ${text}`
+        );
     }
 
-    return newLikes;
+    return Number(text);
 }
 
 
