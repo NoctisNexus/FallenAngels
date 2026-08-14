@@ -19,10 +19,18 @@ const windowsSongs = [
         title: "Behind the Mask",
         file: "musik/Behind the Mask.mp3"
     },
-{
-    title: "In to the Grey",
-    file: "musik/in-to-the-grey.mp3"
-}
+    {
+        title: "In to the Grey",
+        file: "musik/in-to-the-grey.mp3"
+    },
+    {
+        title: "Dunkle Seelen von DarkAngel und Windows in black",
+        file: "musik/dunkle-seelen-darkangel-windows-in-black.mp3"
+    },
+    {
+        title: "The night May never end DarkAngel vs Windows in Black",
+        file: "musik/The night May never end DarkAngel vs Windows in Black.mp3"
+    }
 ];
 const audio =
     document.getElementById("windows-audio");
